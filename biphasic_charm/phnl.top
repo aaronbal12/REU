@@ -1,9 +1,9 @@
 #include "/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
 
 ; additional params for the molecule
-#include "mne.prm"
+#include "phnl.prm"
 
-#include "mne.itp"
+#include "phnl.itp"
 
 #include "/home/apbal/ff/charmm36-jul2022.ff//tip3p.itp"
 #ifdef POSRES_WATER
@@ -22,5 +22,5 @@ mol
 
 [ molecules ]
 ; Compound		  #mols
-mne			1
+phnl			1
 

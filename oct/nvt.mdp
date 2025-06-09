@@ -1,0 +1,54 @@
+integrator      = md
+nsteps          = 500000     ; 100 ps with 2 fs timestep
+dt              = 0.002
+
+nstxout         = 1000
+nstvout         = 1000
+nstenergy       = 1000
+nstlog          = 1000
+
+cutoff-scheme   = Verlet
+rlist           = 1.0
+rcoulomb        = 1.0
+rvdw            = 1.0
+
+coulombtype     = PME
+
+tcoupl          = V-rescale
+tc-grps         = System
+tau_t           = 0.1
+ref_t           = 298
+
+pcoupl          = no
+
+gen_vel         = yes
+gen_temp        = 300
+gen_seed        = -1
+
+pbc             = xyz
+
+pull                    = yes
+pull_ngroups            = 2
+pull_group0             = System
+pull_group1             = System
+
+# Bottom wall at z = 2 nm
+pull_coord1_type        = flat-bottom
+pull_coord1_geometry    = direction
+pull_coord1_dim         = N N Y
+pull_coord1_start       = yes
+pull_coord1_vec         = 0 0 1
+pull_coord1_init        = 2.0
+pull_coord1_k           = 1000
+pull_coord1_flatbottom  = 0.0
+
+# Top wall at z = 5 nm
+pull_coord2_type        = flat-bottom
+pull_coord2_geometry    = direction
+pull_coord2_dim         = N N Y
+pull_coord2_start       = yes
+pull_coord2_vec         = 0 0 -1
+pull_coord2_init        = 5.0
+pull_coord2_k           = 1000
+pull_coord2_flatbottom  = 0.0
+

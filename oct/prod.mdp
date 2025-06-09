@@ -1,11 +1,12 @@
 integrator      = md
-nsteps          = 500000     ; 100 ps with 2 fs timestep
+nsteps          = 5000000   ; 10 ns with 2 fs timestep
 dt              = 0.002
 
-nstxout         = 1000
-nstvout         = 1000
+nstxout         = 5000
+nstvout         = 5000
 nstenergy       = 1000
 nstlog          = 1000
+nstxout-compressed = 1000
 
 cutoff-scheme   = Verlet
 rlist           = 1.0
@@ -19,12 +20,13 @@ tc-grps         = System
 tau_t           = 0.1
 ref_t           = 298
 
-pcoupl          = no
+pcoupl          = Parrinello-Rahman
+pcoupltype      = isotropic
+tau_p           = 2.0
+ref_p           = 1.0
+compressibility = 4.5e-5
 
-gen_vel         = yes
-gen_temp        = 300
-gen_seed        = -1
+gen_vel         = no
 
 pbc             = xyz
-
 

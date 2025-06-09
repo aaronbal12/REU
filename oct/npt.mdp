@@ -30,7 +30,7 @@ tau_t                   = 0.1
 ref_t                   = 300
 
 ; PRESSURE COUPLING IS ON
-pcoupl                  = Berendsen
+pcoupl                  = Parrinello-Rahman
 pcoupltype              = isotropic
 tau_p                   = 5.0
 ref_p                   = 1.0

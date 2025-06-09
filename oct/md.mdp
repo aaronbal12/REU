@@ -21,9 +21,9 @@ lincs_order      = 6           ; more stable for rings like CHX
 cutoff-scheme    = Verlet
 ns_type          = grid
 nstlist          = 100
-rlist            = 1.2
-rcoulomb         = 1.2
-rvdw             = 1.2
+rlist            = 1
+rcoulomb         = 1
+rvdw             = 1
 
 ; Electrostatics
 coulombtype      = PME

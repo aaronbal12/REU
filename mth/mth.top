@@ -1,0 +1,38 @@
+#include "/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
+
+; additional params for the molecule
+#include "mth.prm"
+
+#include "mth.itp"
+
+#include "/home/apbal/ff/charmm36-jul2022.ff//tip3p.itp"
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct		 fcx		fcy		   fcz
+   1	1		1000	   1000		  1000
+#endif
+
+; Include topology for ions
+#include "/home/apbal/ff/charmm36-jul2022.ff//ions.itp"
+
+[ system ]
+; Name
+mol in water
+
+[ molecules ]
+; Compound		  #mols
+mth			1
+
+SOL               678
+SOL               360
+SOL               342
+SOL               322
+SOL               322
+SOL               322
+SOL               314
+SOL               314
+SOL               345
+SOL               345
+SOL               347
+SOL               333

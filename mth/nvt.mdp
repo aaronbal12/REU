@@ -27,3 +27,28 @@ gen_seed        = -1
 
 pbc             = xyz
 
+pull                    = yes
+pull_ngroups            = 2
+pull_group0             = System
+pull_group1             = System
+
+# Bottom wall at z = 2 nm
+pull_coord1_type        = flat-bottom
+pull_coord1_geometry    = direction
+pull_coord1_dim         = N N Y
+pull_coord1_start       = yes
+pull_coord1_vec         = 0 0 1
+pull_coord1_init        = 2.0
+pull_coord1_k           = 1000
+pull_coord1_flatbottom  = 0.0
+
+# Top wall at z = 5 nm
+pull_coord2_type        = flat-bottom
+pull_coord2_geometry    = direction
+pull_coord2_dim         = N N Y
+pull_coord2_start       = yes
+pull_coord2_vec         = 0 0 -1
+pull_coord2_init        = 5.0
+pull_coord2_k           = 1000
+pull_coord2_flatbottom  = 0.0
+

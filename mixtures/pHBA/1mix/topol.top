@@ -2,10 +2,12 @@
 
 ; additional params for the molecule
 #include "dma.prm"
+#include "phba.prm"
 #include "etac.prm"
 #include "etoh.prm"
 #include "meoh.prm"
 
+#include "phba.itp"
 #include "dma.itp"
 #include "etac.itp"
 #include "etoh.itp"
@@ -28,6 +30,7 @@ mol
 
 [ molecules ]
 ; Compound		  #mols
+PHBA			10
 DMA			174
 ETAC			205
 ETOH			147

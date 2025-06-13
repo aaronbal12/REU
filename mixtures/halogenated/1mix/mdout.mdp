@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: Aaron
-;	At date: Thu Jun 12 23:39:21 2025
+;	At date: Fri Jun 13 01:25:11 2025
 ;
 ;	Created by:
 ;	         :-) GROMACS - gmx grompp, 2023.3-Ubuntu_2023.3_1ubuntu3 (-:
@@ -25,7 +25,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 2500000
+nsteps                   = 5000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -171,7 +171,7 @@ annealing-temp           =
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen_vel                  = yes
 gen_temp                 = 300
-gen_seed                 = 2130639231
+gen_seed                 = -1442861057
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds

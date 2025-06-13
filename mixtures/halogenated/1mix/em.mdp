@@ -1,5 +1,5 @@
 integrator = steep ; algorithm
-emtol = 100 ; max force <100
+emtol = 1000 ; max force <100
 emstep = 0.01 ; step size
 nsteps = 100000 ; steps
 

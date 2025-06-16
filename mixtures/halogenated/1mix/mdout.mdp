@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
-;	On host: Aaron
-;	At date: Fri Jun 13 01:25:11 2025
+;	On host: cbe-rvl017
+;	At date: Mon Jun 16 13:51:13 2025
 ;
 ;	Created by:
 ;	         :-) GROMACS - gmx grompp, 2023.3-Ubuntu_2023.3_1ubuntu3 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr
 ;	Working dir:  /home/apbal/work/REU/mixtures/halogenated/1mix
 ;	Command line:
-;	  gmx grompp -f nvt.mdp -c em.gro -p topol.top -o nvt.tpr
+;	  gmx grompp -f npt.mdp -c em_z.gro -p topol.top -o npt.tpr -maxwarn 1
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -25,7 +25,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 5000000
+nsteps                   = 50000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -84,7 +84,7 @@ cutoff-scheme            = Verlet
 ; nblist update frequency
 nstlist                  = 10
 ; Periodic boundary conditions: xyz, no, xy
-pbc                      = xyz
+pbc                      = xy
 periodic-molecules       = no
 ; Allowed energy error due to the Verlet buffer in kJ/mol/ps per atom,
 ; a value of -1 means: use rlist
@@ -98,7 +98,7 @@ rlist                    = 1
 coulombtype              = PME
 coulomb-modifier         = Potential-shift-Verlet
 rcoulomb-switch          = 0
-rcoulomb                 = 1.0
+rcoulomb                 = 1.4
 ; Relative dielectric constant for the medium and the reaction field
 epsilon-r                = 1
 epsilon-rf               = 0
@@ -107,7 +107,7 @@ vdw-type                 = Cut-off
 vdw-modifier             = Potential-shift-Verlet
 ; cut-off lengths       
 rvdw-switch              = 0
-rvdw                     = 1.0
+rvdw                     = 1.4
 ; Apply long range dispersion corrections for Energy and Pressure
 DispCorr                 = EnerPres
 ; Extension of the potential lookup tables beyond the cut-off
@@ -125,7 +125,7 @@ pme_order                = 4
 ewald-rtol               = 1e-05
 ewald-rtol-lj            = 0.001
 lj-pme-comb-rule         = Geometric
-ewald-geometry           = 3d
+ewald-geometry           = 3dc
 epsilon-surface          = 0
 implicit-solvent         = no
 
@@ -143,13 +143,13 @@ tc-grps                  = System
 tau_t                    = 0.1
 ref_t                    = 298
 ; pressure coupling     
-pcoupl                   = no
-pcoupltype               = Isotropic
+pcoupl                   = Parrinello-Rahman
+pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau-p                    = 1
-compressibility          = 
-ref-p                    = 
+tau_p                    = 2.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
 refcoord-scaling         = No
 
@@ -171,7 +171,7 @@ annealing-temp           =
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen_vel                  = yes
 gen_temp                 = 300
-gen_seed                 = -1442861057
+gen_seed                 = -70947457
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds
@@ -201,11 +201,11 @@ energygrp-excl           =
 
 ; WALLS                
 ; Number of walls, type, atom types, densities and box-z scale factor for Ewald
-nwall                    = 0
-wall-type                = 9-3
+nwall                    = 2
+wall-type                = 12-6
 wall-r-linpot            = -1
-wall-atomtype            = 
-wall-density             = 
+wall-atomtype            = CG2O2 CG2O2
+wall-density             = 150 150
 wall-ewald-zfac          = 3
 
 ; COM PULLING          

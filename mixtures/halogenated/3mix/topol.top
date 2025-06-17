@@ -26,12 +26,7 @@ mol in water
 
 [ molecules ]
 ; Compound		  #mols
-SOL			1
-SOL             16952
-SOL             16953
-SOL              3018
-SOL              6593
-SOL             16953
-SOL              1386
-SOL              1549
-SOL              1761
+phba			20
+chlf			700
+acn			400
+SOL			275

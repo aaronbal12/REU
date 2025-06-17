@@ -4,7 +4,7 @@ emstep = 0.01 ; step size
 nsteps = 100000 ; steps
 
 ; neighbor searching
-nstlist         = 10         ; Frequency to update the neighbor list and long range forces
+nstlist         = 20         ; Frequency to update the neighbor list and long range forces
 ewald-geometry	= 3d	    ; ewald
 cutoff-scheme   = Verlet    ; Buffered neighbor searching
 coulombtype     = PME       ; Treatment of long range electrostatic interactions

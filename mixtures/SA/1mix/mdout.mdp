@@ -2,16 +2,16 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
 ;	On host: euler01.engr.wisc.edu
-;	At date: Tue Jun 17 16:06:07 2025
+;	At date: Tue Jun 17 18:08:12 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs_2021.5/bin/gmx
 ;	Data prefix:  /usr/local/gromacs_2021.5
-;	Working dir:  /srv/home/apbal/work/REU/mixtures/pHBA/1mix
+;	Working dir:  /srv/home/apbal/work/REU/mixtures/SA/1mix
 ;	Command line:
-;	  gmx grompp -f nvt_prod.mdp -c nvt.gro -p topol.top -r nvt.gro -o nvt_prod.tpr -maxwarn 3
+;	  gmx grompp -f nvt_prod.mdp -c npt.gro -p topol.top -r npt.gro -o nvt_prod.tpr -maxwarn 3
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.

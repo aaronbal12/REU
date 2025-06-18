@@ -1,0 +1,97 @@
+                      :-) GROMACS - gmx grompp, 2021.5 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2021.5
+Executable:   /usr/local/gromacs_2021.5/bin/gmx
+Data prefix:  /usr/local/gromacs_2021.5
+Working dir:  /srv/home/apbal/work/REU/mixtures/SAD/1mix
+Command line:
+  gmx grompp -f minim.mdp -c box.gro -p topol.top -r box.gro -o em.tpr -maxwarn 10
+
+Generating 1-4 interactions: fudge = 1
+atom name 1 in topol.top and box.gro does not match (C1 - C)
+
+atom name 2 in topol.top and box.gro does not match (C2 - C)
+
+atom name 3 in topol.top and box.gro does not match (H1 - H)
+
+atom name 4 in topol.top and box.gro does not match (H2 - H)
+
+atom name 5 in topol.top and box.gro does not match (C3 - C)
+
+atom name 6 in topol.top and box.gro does not match (C4 - C)
+
+atom name 7 in topol.top and box.gro does not match (O1 - O)
+
+atom name 8 in topol.top and box.gro does not match (C5 - C)
+
+atom name 9 in topol.top and box.gro does not match (C6 - C)
+
+atom name 10 in topol.top and box.gro does not match (C7 - C)
+
+atom name 11 in topol.top and box.gro does not match (O2 - O)
+
+atom name 12 in topol.top and box.gro does not match (H3 - H)
+
+atom name 13 in topol.top and box.gro does not match (O3 - O)
+
+atom name 14 in topol.top and box.gro does not match (H4 - H)
+
+atom name 15 in topol.top and box.gro does not match (C8 - C)
+
+atom name 16 in topol.top and box.gro does not match (H5 - H)
+
+atom name 17 in topol.top and box.gro does not match (C9 - C)
+
+atom name 18 in topol.top and box.gro does not match (H6 - H)
+
+atom name 19 in topol.top and box.gro does not match (H7 - H)
+
+atom name 20 in topol.top and box.gro does not match (H8 - H)
+
+(more than 20 non-matching atom names)
+
+WARNING 1 [file topol.top, line 38]:
+  37455 non-matching atom names
+  atom names from topol.top will be used
+  atom names from box.gro will be ignored
+
+
+Number of degrees of freedom in T-Coupling group rest is 84378.00
+
+There was 1 warning
+
+Back Off! I just backed up em.tpr to ./#em.tpr.1#
+
+GROMACS reminds you: "Academe, n.: An ancient school where morality and philosophy were taught. Academy, n.: A modern school where football is taught." (Ambrose Bierce)
+
+slurmstepd: error: *** JOB 2076672 ON euler03 CANCELLED AT 2025-06-17T17:50:36 ***

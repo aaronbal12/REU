@@ -1,12 +1,12 @@
-[Tue Jun 17 05:20:29 PM CDT 2025] Running EM
-[Tue Jun 17 05:20:29 PM CDT 2025] Starting EM from scratch
-Setting the LD random seed to -4723275
+[Tue Jun 17 05:50:33 PM CDT 2025] Running EM
+[Tue Jun 17 05:50:33 PM CDT 2025] Starting EM from scratch
+Setting the LD random seed to -18875402
 
 Generated 169542 of the 169653 non-bonded parameter combinations
 
 Generated 119175 of the 169653 1-4 parameter combinations
 
-Excluding 3 bonded neighbours molecule type 'PHBA'
+Excluding 3 bonded neighbours molecule type 'SAD'
 
 Excluding 3 bonded neighbours molecule type 'DMA'
 
@@ -46,17 +46,17 @@ atom name 13 in topol.top and box.gro does not match (O3 - O)
 
 atom name 14 in topol.top and box.gro does not match (H4 - H)
 
-atom name 15 in topol.top and box.gro does not match (H5 - H)
+atom name 15 in topol.top and box.gro does not match (C8 - C)
 
-atom name 16 in topol.top and box.gro does not match (H6 - H)
+atom name 16 in topol.top and box.gro does not match (H5 - H)
 
-atom name 17 in topol.top and box.gro does not match (C1 - C)
+atom name 17 in topol.top and box.gro does not match (C9 - C)
 
-atom name 18 in topol.top and box.gro does not match (C2 - C)
+atom name 18 in topol.top and box.gro does not match (H6 - H)
 
-atom name 19 in topol.top and box.gro does not match (H1 - H)
+atom name 19 in topol.top and box.gro does not match (H7 - H)
 
-atom name 20 in topol.top and box.gro does not match (H2 - H)
+atom name 20 in topol.top and box.gro does not match (H8 - H)
 
 (more than 20 non-matching atom names)
 Analysing residue names:
@@ -66,12 +66,6 @@ Analysing residues not classified as Protein/DNA/RNA/Water and splitting into gr
 Calculating fourier grid dimensions for X Y Z
 Using a fourier grid of 52x52x200, spacing 0.115 0.115 0.120
 
-Estimate for the relative computational load of the PME mesh part: 0.33
+Estimate for the relative computational load of the PME mesh part: 0.32
 
 This run will generate roughly 3 Mb of data
-[Tue Jun 17 05:28:30 PM CDT 2025] Running NVT for 
-[Tue Jun 17 05:28:30 PM CDT 2025] Resuming NVT from checkpoint
-[Tue Jun 17 05:28:39 PM CDT 2025] Running NPT for 
-[Tue Jun 17 05:28:39 PM CDT 2025] Resuming NPT from checkpoint
-[Tue Jun 17 05:28:47 PM CDT 2025] Running NVT_prod for 
-[Tue Jun 17 05:28:47 PM CDT 2025] Resuming NVT_prod from checkpoint

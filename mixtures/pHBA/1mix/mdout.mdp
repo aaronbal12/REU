@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler01.engr.wisc.edu
-;	At date: Tue Jun 17 17:34:37 2025
+;	On host: euler03.engr.wisc.edu
+;	At date: Tue Jun 17 19:28:26 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local/gromacs_2021.5
 ;	Working dir:  /srv/home/apbal/work/REU/mixtures/pHBA/1mix
 ;	Command line:
-;	  gmx grompp -f nvt_prod.mdp -c npt.gro -p topol.top -r npt.gro -o nvt_prod.tpr -maxwarn 3
+;	  gmx grompp -f nvt.mdp -c em.gro -p topol.top -r em.gro -o nvt.tpr -maxwarn 3
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -131,7 +131,7 @@ implicit-solvent         = no
 
 ; OPTIONS FOR WEAK COUPLING ALGORITHMS
 ; Temperature coupling  
-tcoupl                   = v-rescale
+tcoupl                   = V-rescale
 nsttcouple               = -1
 nh-chain-length          = 10
 print-nose-hoover-chain-variables = no

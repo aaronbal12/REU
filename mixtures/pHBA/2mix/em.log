@@ -34,7 +34,7 @@ GROMACS:      gmx mdrun, version 2021.5
 Executable:   /usr/local/gromacs_2021.5/bin/gmx
 Data prefix:  /usr/local/gromacs_2021.5
 Working dir:  /srv/home/apbal/work/REU/mixtures/pHBA/2mix
-Process ID:   47589
+Process ID:   52559
 Command line:
   gmx mdrun -v -deffnm em
 
@@ -144,7 +144,7 @@ Input Parameters:
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = 389934198
+   ld-seed                        = -178265217
    emtol                          = 1000
    emstep                         = 0.01
    niter                          = 20

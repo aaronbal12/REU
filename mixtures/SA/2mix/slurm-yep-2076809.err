@@ -1,0 +1,115 @@
+                      :-) GROMACS - gmx grompp, 2021.5 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2021.5
+Executable:   /usr/local/gromacs_2021.5/bin/gmx
+Data prefix:  /usr/local/gromacs_2021.5
+Working dir:  /srv/home/apbal/work/REU/mixtures/SA/2mix
+Command line:
+  gmx grompp -f npt.mdp -c nvt.gro -p topol.top -r nvt.gro -o npt.tpr -maxwarn 3
+
+Ignoring obsolete mdp entry 'title'
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group System is 80085.00
+
+Back Off! I just backed up npt.tpr to ./#npt.tpr.1#
+
+GROMACS reminds you: "Research ! A mere excuse for idleness; it has never achieved, and will never achieve any results of the slightest value." (Benjamin Jowett, British theologian, 1817-93)
+
+                      :-) GROMACS - gmx mdrun, 2021.5 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2021.5
+Executable:   /usr/local/gromacs_2021.5/bin/gmx
+Data prefix:  /usr/local/gromacs_2021.5
+Working dir:  /srv/home/apbal/work/REU/mixtures/SA/2mix
+Command line:
+  gmx mdrun -v -deffnm npt -ntomp 10 -nb gpu -bonded cpu -update gpu -ntmpi 1 -cpt 1
+
+
+Back Off! I just backed up npt.log to ./#npt.log.1#
+Reading file npt.tpr, VERSION 2021.5 (single precision)
+Changing nstlist from 10 to 100, rlist from 1.4 to 1.458
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 10 OpenMP threads 
+
+starting mdrun 'mol'
+500000 steps,   1000.0 ps.
+step 0step 100, will finish Wed Jun 18 13:40:21 2025step 200, will finish Wed Jun 18 13:37:51 2025step 300, will finish Wed Jun 18 13:36:27 2025step 400, will finish Wed Jun 18 13:35:42 2025step 500, will finish Wed Jun 18 13:35:16 2025step 600, will finish Wed Jun 18 13:34:58 2025step 700, will finish Wed Jun 18 13:34:45 2025step 800, will finish Wed Jun 18 13:34:39 2025step 900, will finish Wed Jun 18 13:34:31 2025step 1000, will finish Wed Jun 18 13:34:29 2025step 1100, will finish Wed Jun 18 13:34:23 2025step 1200, will finish Wed Jun 18 13:34:18 2025step 1300, will finish Wed Jun 18 13:34:15 2025step 1400, remaining wall clock time:   296 s          step 1500, remaining wall clock time:   293 s          step 1600, remaining wall clock time:   291 s          step 1700, remaining wall clock time:   289 s          step 1800, remaining wall clock time:   287 s          step 1900, remaining wall clock time:   285 s          step 2000, remaining wall clock time:   286 s          step 2100, remaining wall clock time:   288 s          step 2200, remaining wall clock time:   291 s          step 2300, remaining wall clock time:   294 s          step 2400, remaining wall clock time:   296 s          step 2500, remaining wall clock time:   297 s          step 2600, remaining wall clock time:   298 s          step 2700, will finish Wed Jun 18 13:34:16 2025step 2800, will finish Wed Jun 18 13:34:17 2025step 2900, will finish Wed Jun 18 13:34:17 2025step 3000, will finish Wed Jun 18 13:34:16 2025step 3100, remaining wall clock time:   299 s          step 3200, remaining wall clock time:   298 s          step 3300, remaining wall clock time:   296 s          step 3400, remaining wall clock time:   296 s          step 3500, remaining wall clock time:   295 s          step 3600, remaining wall clock time:   294 s          step 3700, remaining wall clock time:   293 s          step 3800, remaining wall clock time:   292 s          step 3900, remaining wall clock time:   291 s          step 4000, remaining wall clock time:   291 s          step 4100, remaining wall clock time:   290 s          step 4200, remaining wall clock time:   289 s          step 4300, remaining wall clock time:   288 s          step 4400, remaining wall clock time:   287 s          step 4500, remaining wall clock time:   287 s          step 4600, remaining wall clock time:   287 s          step 4700, remaining wall clock time:   286 s          step 4800, remaining wall clock time:   285 s          step 4900, remaining wall clock time:   285 s          step 5000, remaining wall clock time:   285 s          step 5100, remaining wall clock time:   284 s          step 5200, remaining wall clock time:   284 s          step 5300, remaining wall clock time:   283 s          step 5400, remaining wall clock time:   282 s          step 5500, remaining wall clock time:   282 s          step 5600, remaining wall clock time:   281 s          step 5700, remaining wall clock time:   281 s          step 5800, remaining wall clock time:   281 s          step 5900, remaining wall clock time:   280 s          step 6000, remaining wall clock time:   281 s          step 6100, remaining wall clock time:   280 s          step 6200, remaining wall clock time:   280 s          step 6300, remaining wall clock time:   279 s          step 6400, remaining wall clock time:   279 s          step 6500, remaining wall clock time:   278 s          step 6600, remaining wall clock time:   278 s          step 6700, remaining wall clock time:   278 s          step 6800, remaining wall clock time:   277 s          step 6900, remaining wall clock time:   277 s          step 7000, remaining wall clock time:   278 s          step 7100, remaining wall clock time:   278 s          step 7200, remaining wall clock time:   277 s          step 7300, remaining wall clock time:   277 s          step 7400, remaining wall clock time:   277 s          step 7500, remaining wall clock time:   276 s          step 7600, remaining wall clock time:   276 s          step 7700, remaining wall clock time:   276 s          step 7800, remaining wall clock time:   276 s          step 7900, remaining wall clock time:   275 s          step 8000, remaining wall clock time:   275 s          step 8100, remaining wall clock time:   275 s          step 8200, remaining wall clock time:   275 s          step 8300, remaining wall clock time:   275 s          step 8400, remaining wall clock time:   275 s          step 8500, remaining wall clock time:   275 s          step 8600, remaining wall clock time:   276 s          step 8700, remaining wall clock time:   276 s          step 8800, remaining wall clock time:   276 s          step 9000: timed with pme grid 52 52 200, coulomb cutoff 1.400: 169.2 M-cycles
+step 9200: timed with pme grid 42 42 168, coulomb cutoff 1.667: 155.4 M-cycles
+step 9400: timed with pme grid 36 36 144, coulomb cutoff 1.944: 209.2 M-cycles
+step 9600: timed with pme grid 40 40 160, coulomb cutoff 1.750: 5865.5 M-cycles
+step 9800: timed with pme grid 42 42 168, coulomb cutoff 1.667: 5836.9 M-cycles
+step 10000: timed with pme grid 44 44 192, coulomb cutoff 1.591: 5821.3 M-cycles
+step 10200: timed with pme grid 48 48 192, coulomb cutoff 1.458: 5818.7 M-cycles
+step 10400: timed with pme grid 52 52 200, coulomb cutoff 1.400: 5803.0 M-cycles
+              optimal pme grid 42 42 168, coulomb cutoff 1.667
+step 10500, will finish Wed Jun 18 14:03:07 2025step 10600, will finish Wed Jun 18 14:04:33 2025step 10700, will finish Wed Jun 18 14:05:57 2025step 10800, will finish Wed Jun 18 14:07:19 2025step 10900, will finish Wed Jun 18 14:08:41 2025step 11000, will finish Wed Jun 18 14:10:00 2025step 11100, will finish Wed Jun 18 14:09:41 2025step 11200, will finish Wed Jun 18 14:09:23 2025step 11300, will finish Wed Jun 18 14:09:04 2025step 11400, will finish Wed Jun 18 14:08:46 2025step 11500, will finish Wed Jun 18 14:08:28 2025step 11600, will finish Wed Jun 18 14:08:10 2025step 11700, will finish Wed Jun 18 14:07:53 2025step 11800, will finish Wed Jun 18 14:07:35 2025step 11900, will finish Wed Jun 18 14:07:19 2025step 12000, will finish Wed Jun 18 14:07:02 2025step 12100, will finish Wed Jun 18 14:06:46 2025step 12200, will finish Wed Jun 18 14:06:30 2025step 12300, will finish Wed Jun 18 14:06:14 2025step 12400, will finish Wed Jun 18 14:05:59 2025step 12500, will finish Wed Jun 18 14:05:44 2025step 12600, will finish Wed Jun 18 14:05:29 2025step 12700, will finish Wed Jun 18 14:05:14 2025step 12800, will finish Wed Jun 18 14:04:59 2025step 12900, will finish Wed Jun 18 14:04:45 2025step 13000, will finish Wed Jun 18 14:04:31 2025step 13100, will finish Wed Jun 18 14:04:18 2025step 13200, will finish Wed Jun 18 14:04:04 2025step 13300, will finish Wed Jun 18 14:03:50 2025step 13400, will finish Wed Jun 18 14:03:37 2025step 13500, will finish Wed Jun 18 14:03:24 2025step 13600, will finish Wed Jun 18 14:03:11 2025step 13700, will finish Wed Jun 18 14:02:59 2025step 13800, will finish Wed Jun 18 14:02:46 2025step 13900, will finish Wed Jun 18 14:02:34 2025step 14000, will finish Wed Jun 18 14:02:22 2025step 14100, will finish Wed Jun 18 14:02:10 2025step 14200, will finish Wed Jun 18 14:01:58 2025step 14300, will finish Wed Jun 18 14:01:47 2025step 14400, will finish Wed Jun 18 14:01:35 2025step 14500, will finish Wed Jun 18 14:01:24 2025step 14600, will finish Wed Jun 18 14:01:13 2025step 14700, will finish Wed Jun 18 14:01:02 2025step 14800, will finish Wed Jun 18 14:00:51 2025step 14900, will finish Wed Jun 18 14:00:40 2025step 15000, will finish Wed Jun 18 14:00:30 2025step 15100, will finish Wed Jun 18 14:00:20 2025step 15200, will finish Wed Jun 18 14:00:09 2025step 15300, will finish Wed Jun 18 13:59:59 2025step 15400, will finish Wed Jun 18 13:59:49 2025step 15500, will finish Wed Jun 18 13:59:39 2025step 15600, will finish Wed Jun 18 13:59:30 2025step 15700, will finish Wed Jun 18 13:59:20 2025step 15800, will finish Wed Jun 18 13:59:11 2025step 15900, will finish Wed Jun 18 13:59:01 2025step 16000, will finish Wed Jun 18 13:58:52 2025step 16100, will finish Wed Jun 18 13:58:43 2025step 16200, will finish Wed Jun 18 13:58:34 2025step 16300, will finish Wed Jun 18 13:58:25 2025step 16400, will finish Wed Jun 18 13:58:16 2025step 16500, will finish Wed Jun 18 13:58:07 2025step 16600, will finish Wed Jun 18 13:57:59 2025step 16700, will finish Wed Jun 18 13:57:50 2025step 16800, will finish Wed Jun 18 13:57:42 2025step 16900, will finish Wed Jun 18 13:57:34 2025step 17000, will finish Wed Jun 18 13:57:26 2025step 17100, will finish Wed Jun 18 13:57:18 2025step 17200, will finish Wed Jun 18 13:57:10 2025step 17300, will finish Wed Jun 18 13:57:02 2025step 17400, will finish Wed Jun 18 13:56:54 2025step 17500, will finish Wed Jun 18 13:56:46 2025step 17600, will finish Wed Jun 18 13:56:38 2025step 17700, will finish Wed Jun 18 13:56:31 2025step 17800, will finish Wed Jun 18 13:56:23 2025step 17900, will finish Wed Jun 18 13:56:16 2025step 18000, will finish Wed Jun 18 13:56:09 2025step 18100, will finish Wed Jun 18 13:56:02 2025step 18200, will finish Wed Jun 18 13:55:55 2025step 18300, will finish Wed Jun 18 13:55:47 2025step 18400, will finish Wed Jun 18 13:55:40 2025step 18500, will finish Wed Jun 18 13:55:34 2025step 18600, will finish Wed Jun 18 13:55:27 2025step 18700, will finish Wed Jun 18 13:55:20 2025step 18800, will finish Wed Jun 18 13:55:13 2025step 18900, will finish Wed Jun 18 13:55:07 2025step 19000, will finish Wed Jun 18 13:55:00 2025step 19100, will finish Wed Jun 18 13:54:54 2025step 19200, will finish Wed Jun 18 13:54:47 2025step 19300, will finish Wed Jun 18 13:54:41 2025step 19400, will finish Wed Jun 18 13:54:35 2025step 19500, will finish Wed Jun 18 13:54:28 2025step 19600, will finish Wed Jun 18 13:54:22 2025step 19700, will finish Wed Jun 18 13:54:16 2025step 19800, will finish Wed Jun 18 13:54:10 2025step 19900, will finish Wed Jun 18 13:54:04 2025step 20000, will finish Wed Jun 18 13:53:58 2025step 20100, will finish Wed Jun 18 13:53:53 2025step 20200, will finish Wed Jun 18 13:53:47 2025step 20300, will finish Wed Jun 18 13:53:41 2025step 20400, will finish Wed Jun 18 13:53:35 2025step 20500, will finish Wed Jun 18 13:53:30 2025step 20600, will finish Wed Jun 18 13:53:24 2025step 20700, will finish Wed Jun 18 13:53:19 2025step 20800, will finish Wed Jun 18 13:53:13 2025step 20900, will finish Wed Jun 18 13:53:08 2025step 21000, will finish Wed Jun 18 13:53:03 2025step 21100, will finish Wed Jun 18 13:53:08 2025step 21200, will finish Wed Jun 18 13:53:03 2025step 21300, will finish Wed Jun 18 13:52:58 2025step 21400, will finish Wed Jun 18 13:52:52 2025step 21500, will finish Wed Jun 18 13:52:47 2025step 21600, will finish Wed Jun 18 13:52:42 2025step 21700, will finish Wed Jun 18 13:52:37 2025step 21800, will finish Wed Jun 18 13:52:32 2025step 21900, will finish Wed Jun 18 13:52:27 2025step 22000, will finish Wed Jun 18 13:52:22 2025step 22100, will finish Wed Jun 18 13:52:17 2025step 22200, will finish Wed Jun 18 13:52:13 2025step 22300, will finish Wed Jun 18 13:52:08 2025step 22400, will finish Wed Jun 18 13:52:03 2025step 22500, will finish Wed Jun 18 13:51:58 2025step 22600, will finish Wed Jun 18 13:51:54 2025step 22700, will finish Wed Jun 18 13:51:49 2025step 22800, will finish Wed Jun 18 13:51:44 2025step 22900, will finish Wed Jun 18 13:51:40 2025step 23000, will finish Wed Jun 18 13:51:36 2025step 23100, will finish Wed Jun 18 13:51:31 2025step 23200, will finish Wed Jun 18 13:51:27 2025step 23300, will finish Wed Jun 18 13:51:22 2025step 23400, will finish Wed Jun 18 13:51:18 2025step 23500, will finish Wed Jun 18 13:51:14 2025step 23600, will finish Wed Jun 18 13:51:10 2025step 23700, will finish Wed Jun 18 13:51:05 2025step 23800, will finish Wed Jun 18 13:51:01 2025step 23900, will finish Wed Jun 18 13:50:57 2025step 24000, will finish Wed Jun 18 13:50:53 2025step 24100, will finish Wed Jun 18 13:50:49 2025step 24200, will finish Wed Jun 18 13:50:45 2025step 24300, will finish Wed Jun 18 13:50:41 2025step 24400, will finish Wed Jun 18 13:50:37 2025step 24500, will finish Wed Jun 18 13:50:33 2025step 24600, will finish Wed Jun 18 13:50:29 2025step 24700, will finish Wed Jun 18 13:50:25 2025step 24800, will finish Wed Jun 18 13:50:21 2025step 24900, will finish Wed Jun 18 13:50:17 2025step 25000, will finish Wed Jun 18 13:50:14 2025step 25100, will finish Wed Jun 18 13:50:10 2025step 25200, will finish Wed Jun 18 13:50:06 2025step 25300, will finish Wed Jun 18 13:50:02 2025step 25400, will finish Wed Jun 18 13:49:59 2025step 25500, will finish Wed Jun 18 13:49:55 2025step 25600, will finish Wed Jun 18 13:49:51 2025step 25700, will finish Wed Jun 18 13:49:48 2025step 25800, will finish Wed Jun 18 13:49:44 2025step 25900, will finish Wed Jun 18 13:49:41 2025step 26000, will finish Wed Jun 18 13:49:37 2025step 26100, will finish Wed Jun 18 13:49:34 2025step 26200, will finish Wed Jun 18 13:49:30 2025step 26300, will finish Wed Jun 18 13:49:27 2025step 26400, will finish Wed Jun 18 13:49:24 2025step 26500, will finish Wed Jun 18 13:49:20 2025step 26600, will finish Wed Jun 18 13:49:17 2025step 26700, will finish Wed Jun 18 13:49:14 2025step 26800, will finish Wed Jun 18 13:49:10 2025step 26900, will finish Wed Jun 18 13:49:07 2025step 27000, will finish Wed Jun 18 13:49:04 2025step 27100, will finish Wed Jun 18 13:49:01 2025step 27200, will finish Wed Jun 18 13:48:57 2025step 27300, will finish Wed Jun 18 13:48:54 2025step 27400, will finish Wed Jun 18 13:48:51 2025step 27500, will finish Wed Jun 18 13:48:48 2025step 27600, will finish Wed Jun 18 13:48:45 2025step 27700, will finish Wed Jun 18 13:48:42 2025step 27800, will finish Wed Jun 18 13:48:39 2025step 27900, will finish Wed Jun 18 13:48:36 2025step 28000, will finish Wed Jun 18 13:48:33 2025step 28100, will finish Wed Jun 18 13:48:30 2025step 28200, will finish Wed Jun 18 13:48:27 2025step 28300, will finish Wed Jun 18 13:48:24 2025step 28400, will finish Wed Jun 18 13:48:21 2025step 28500, will finish Wed Jun 18 13:48:18 2025step 28600, will finish Wed Jun 18 13:48:15 2025step 28700, will finish Wed Jun 18 13:48:12 2025step 28800, will finish Wed Jun 18 13:48:09 2025step 28900, will finish Wed Jun 18 13:48:06 2025step 29000, will finish Wed Jun 18 13:48:04 2025step 29100, will finish Wed Jun 18 13:48:01 2025step 29200, will finish Wed Jun 18 13:47:58 2025step 29300, will finish Wed Jun 18 13:47:55 2025step 29400, will finish Wed Jun 18 13:47:53 2025step 29500, will finish Wed Jun 18 13:47:50 2025step 29600, will finish Wed Jun 18 13:47:47 2025step 29700, will finish Wed Jun 18 13:47:45 2025step 29800, will finish Wed Jun 18 13:47:42 2025step 29900, will finish Wed Jun 18 13:47:39 2025step 30000, will finish Wed Jun 18 13:47:37 2025step 30100, will finish Wed Jun 18 13:47:34 2025step 30200, will finish Wed Jun 18 13:47:32 2025step 30300, will finish Wed Jun 18 13:47:29 2025step 30400, will finish Wed Jun 18 13:47:26 2025step 30500, will finish Wed Jun 18 13:47:43 2025step 30600, will finish Wed Jun 18 13:48:17 2025step 30700, will finish Wed Jun 18 13:48:50 2025step 30800, will finish Wed Jun 18 13:49:23 2025step 30900, will finish Wed Jun 18 13:49:56 2025step 31000, will finish Wed Jun 18 13:50:28 2025step 31100, will finish Wed Jun 18 13:51:01 2025step 31200, will finish Wed Jun 18 13:51:32 2025step 31300, will finish Wed Jun 18 13:52:04 2025step 31400, will finish Wed Jun 18 13:52:36 2025step 31500, will finish Wed Jun 18 13:53:08 2025step 31600, will finish Wed Jun 18 13:53:38 2025step 31700, will finish Wed Jun 18 13:54:09 2025step 31800, will finish Wed Jun 18 13:54:40 2025step 31900, will finish Wed Jun 18 13:55:11 2025step 32000, will finish Wed Jun 18 13:55:41 2025step 32100, will finish Wed Jun 18 13:56:12 2025step 32200, will finish Wed Jun 18 13:56:42 2025step 32300, will finish Wed Jun 18 13:57:12 2025step 32400, will finish Wed Jun 18 13:57:42 2025step 32500, will finish Wed Jun 18 13:58:12 2025step 32600, will finish Wed Jun 18 13:58:42 2025step 32700, will finish Wed Jun 18 13:59:11 2025

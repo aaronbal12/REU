@@ -24,7 +24,7 @@ DispCorr                = EnerPres  ; account for cut-off vdW scheme
 coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
 pme_order               = 4         ; cubic interpolation
 ; Temperature coupling is on
-tcoupl                  = nose-Hoover             ; modified Berendsen thermostat
+tcoupl                  = v-rescale             ; modified Berendsen thermostat
 tc-grps			= System
 tau_t                   = 0.1           ; time constant, in ps
 ref_t                   = 298         ; reference temperature, one for each group, in K

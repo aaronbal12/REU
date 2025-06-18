@@ -1,17 +1,17 @@
 ;
 ;	File 'mdout.mdp' was generated
-;	By user: unknown (1000)
-;	On host: cbe-rvl017
-;	At date: Tue Jun 17 15:04:09 2025
+;	By user: unknown (6041)
+;	On host: euler05.engr.wisc.edu
+;	At date: Wed Jun 18 11:27:22 2025
 ;
 ;	Created by:
-;	         :-) GROMACS - gmx grompp, 2023.3-Ubuntu_2023.3_1ubuntu3 (-:
+;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
-;	Executable:   /usr/bin/gmx
-;	Data prefix:  /usr
-;	Working dir:  /home/apbal/work/REU/mixtures/pHBA/1mix
+;	Executable:   /usr/local/gromacs_2021.5/bin/gmx
+;	Data prefix:  /usr/local/gromacs_2021.5
+;	Working dir:  /srv/home/apbal/work/REU/mixtures/pHBA/3mix
 ;	Command line:
-;	  gmx grompp -f minim.mdp -c box.gro -p topol.top -o em.tpr -maxwarn 1
+;	  gmx grompp -f minim.mdp -c box.gro -p topol.top -r box.gro -o em.tpr -maxwarn 10
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -82,7 +82,7 @@ energygrps               =
 ; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = Verlet
 ; nblist update frequency
-nstlist                  = 1
+nstlist                  = 20
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -130,8 +130,6 @@ epsilon-surface          = 0
 implicit-solvent         = no
 
 ; OPTIONS FOR WEAK COUPLING ALGORITHMS
-ensemble-temperature-setting = auto
-ensemble-temperature     = -1
 ; Temperature coupling  
 tcoupl                   = No
 nsttcouple               = -1
@@ -171,7 +169,7 @@ annealing-temp           =
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen-vel                  = no
 gen-temp                 = 300
-gen-seed                 = -117440777
+gen-seed                 = -1
 
 ; OPTIONS FOR BONDS    
 constraints              = none
@@ -261,15 +259,11 @@ temperature-lambdas      =
 calc-lambda-neighbors    = 1
 init-lambda-weights      = 
 dhdl-print-energy        = no
-sc-function              = beutler
 sc-alpha                 = 0
 sc-power                 = 1
 sc-r-power               = 6
 sc-sigma                 = 0.3
 sc-coul                  = no
-sc-gapsys-scale-linpoint-lj = 0.85
-sc-gapsys-scale-linpoint-q = 0.3
-sc-gapsys-sigma-lj       = 0.3
 separate-dhdl-file       = yes
 dhdl-derivatives         = yes
 dh_hist_size             = 0
@@ -316,6 +310,3 @@ electric-field-z         = 0 0 0 0
 
 ; Density guided simulation
 density-guided-simulation-active = false
-
-; QM/MM with CP2K
-qmmm-cp2k-active         = false

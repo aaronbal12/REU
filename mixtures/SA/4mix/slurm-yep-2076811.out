@@ -69,3 +69,160 @@ Using a fourier grid of 52x52x200, spacing 0.115 0.115 0.120
 Estimate for the relative computational load of the PME mesh part: 0.32
 
 This run will generate roughly 3 Mb of data
+[Wed Jun 18 01:44:10 PM CDT 2025] Running NVT for 
+[Wed Jun 18 01:44:10 PM CDT 2025] Starting NVT from scratch
+Setting the LD random seed to -438305361
+
+Generated 169542 of the 169653 non-bonded parameter combinations
+
+Generated 119175 of the 169653 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'SA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'DMA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'ETAC'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'ETOH'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'MEOH'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Setting gen_seed to -277356746
+
+Velocities were taken from a Maxwell distribution at 300 K
+Analysing residue names:
+There are:   644      Other residues
+There are:  9375      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 298 K
+
+Calculated rlist for 1x1 atom pair-list as 1.416 nm, buffer size 0.016 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.400 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 52x52x200, spacing 0.115 0.115 0.120
+
+Estimate for the relative computational load of the PME mesh part: 0.28
+
+This run will generate roughly 220 Mb of data
+[Wed Jun 18 01:48:50 PM CDT 2025] Running NPT for 
+[Wed Jun 18 01:48:50 PM CDT 2025] Starting NPT from scratch
+Setting the LD random seed to 1053212563
+
+Generated 169542 of the 169653 non-bonded parameter combinations
+
+Generated 119175 of the 169653 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'SA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'DMA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'ETAC'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'ETOH'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'MEOH'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Setting gen_seed to -21013769
+
+Velocities were taken from a Maxwell distribution at 300 K
+Analysing residue names:
+There are:   644      Other residues
+There are:  9375      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 298 K
+
+Calculated rlist for 1x1 atom pair-list as 1.416 nm, buffer size 0.016 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.400 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 52x52x200, spacing 0.115 0.115 0.120
+
+Estimate for the relative computational load of the PME mesh part: 0.28
+
+This run will generate roughly 437 Mb of data
+[Wed Jun 18 01:56:18 PM CDT 2025] Running NVT_prod for 
+[Wed Jun 18 01:56:18 PM CDT 2025] Starting NVT_prod from scratch
+Setting the LD random seed to 486387379
+
+Generated 169542 of the 169653 non-bonded parameter combinations
+
+Generated 119175 of the 169653 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'SA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'DMA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'ETAC'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'ETOH'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'MEOH'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Setting gen_seed to -1075913857
+
+Velocities were taken from a Maxwell distribution at 300 K
+Analysing residue names:
+There are:   644      Other residues
+There are:  9375      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 298 K
+
+Calculated rlist for 1x1 atom pair-list as 1.429 nm, buffer size 0.029 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.400 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 40x40x160, spacing 0.114 0.114 0.114
+
+Estimate for the relative computational load of the PME mesh part: 0.13

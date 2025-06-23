@@ -1,0 +1,13 @@
+integrator = steep ; algorithm
+emtol = 1000 ; max force <100
+emstep = 0.01 ; step size
+nsteps = 100000 ; steps
+
+; neighbor searching
+nstlist         = 1         ; Frequency to update the neighbor list and long range forces
+ewald-geometry	= 3d	    ; ewald
+cutoff-scheme   = Verlet    ; Buffered neighbor searching
+coulombtype     = PME       ; Treatment of long range electrostatic interactions
+rcoulomb        = 1.2       ; Short-range electrostatic cut-off
+rvdw            = 1.0       ; Short-range Van der Waals cut-off
+pbc             = xyz        ; Periodic Boundary Conditions in all 3 dimensions

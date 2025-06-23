@@ -1,14 +1,13 @@
 title                   =  NPT equilibration 
 ; Run parameters
 integrator              = md        ; leap-frog integrator
-nsteps                  = 500000     ; 2 * 50000 = 100 ps
+nsteps                  = 2500000     ; 2 * 50000 = 100 ps
 dt                      = 0.002     ; 2 fs
 ; Output control
-nstxout                 = 5000       ; save coordinates every 1.0 ps
-nstvout                 = 5000       ; save velocities every 1.0 ps
-nstenergy               = 5000       ; save energies every 1.0 ps
-nstlog                  = 5000       ; update log file every 1.0 ps
-nstxout-compressed	= 5000       ; xtc file
+nstxout                 = 1000       ; save coordinates every 1.0 ps
+nstvout                 = 1000       ; save velocities every 1.0 ps
+nstenergy               = 1000       ; save energies every 1.0 ps
+nstlog                  = 1000       ; update log file every 1.0 ps
 ; Bond parameters
 continuation            = no        ; first dynamics run
 constraint_algorithm    = lincs     ; holonomic constraints 

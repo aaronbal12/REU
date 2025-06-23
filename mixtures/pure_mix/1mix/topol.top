@@ -1,0 +1,37 @@
+#include "/srv/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
+
+; additional params for the molecule
+#include "/srv/home/apbal/ff/dma.prm"
+#include "/srv/home/apbal/ff/phba.prm"
+#include "/srv/home/apbal/ff/etac.prm"
+#include "/srv/home/apbal/ff/etoh.prm"
+#include "/srv/home/apbal/ff/meoh.prm"
+
+#include "/srv/home/apbal/ff/phba.itp"
+#include "/srv/home/apbal/ff/dma.itp"
+#include "/srv/home/apbal/ff/etac.itp"
+#include "/srv/home/apbal/ff/etoh.itp"
+#include "/srv/home/apbal/ff/meoh.itp"
+
+#include "/srv/home/apbal/ff/charmm36-jul2022.ff//tip3p.itp"
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct		 fcx		fcy		   fcz
+   1	1		1000	   1000		  1000
+#endif
+
+; Include topology for ions
+#include "/srv/home/apbal/ff/charmm36-jul2022.ff//ions.itp"
+
+[ system ]
+; Name
+mol
+
+[ molecules ]
+; Compound		  #mols
+DMA			174
+ETAC			205
+ETOH			147
+MEOH			0
+SOL			9475

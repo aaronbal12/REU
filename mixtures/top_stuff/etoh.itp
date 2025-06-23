@@ -1,0 +1,76 @@
+; Created by cgenff_charmm2gmx.py
+
+[ moleculetype ]
+; Name			   nrexcl
+ETOH				 3
+
+[ atoms ]
+;	 nr		  type	resnr residue  atom   cgnr	   charge		mass  typeB    chargeB		massB
+; residue	 1 ETOH rtp ETOH q	qsum
+     1      CG331      1   ETOH     C1      1     -0.272     12.011   ;
+     2      CG321      1   ETOH     C2      2      0.053     12.011   ;
+     3       HGA3      1   ETOH     H1      3      0.090      1.008   ;
+     4       HGA3      1   ETOH     H2      4      0.090      1.008   ;
+     5       HGA3      1   ETOH     H3      5      0.090      1.008   ;
+     6       HGA2      1   ETOH     H4      6      0.090      1.008   ;
+     7      OG311      1   ETOH      O      7     -0.650     15.999   ;
+     8       HGA2      1   ETOH     H5      8      0.090      1.008   ;
+     9       HGP1      1   ETOH     H6      9      0.419      1.008   ;
+
+[ bonds ]
+;	ai	  aj funct			  c0			c1			  c2			c3
+    1     2	 1
+    1     3	 1
+    1     4	 1
+    1     5	 1
+    2     6	 1
+    2     7	 1
+    2     8	 1
+    7     9	 1
+
+[ pairs ]
+;	ai	  aj funct			  c0			c1			  c2			c3
+    1     9	 1
+    3     6	 1
+    3     7	 1
+    3     8	 1
+    4     6	 1
+    4     7	 1
+    4     8	 1
+    5     6	 1
+    5     7	 1
+    5     8	 1
+    6     9	 1
+    8     9	 1
+
+[ angles ]
+;	ai	  aj	ak funct			c0			  c1			c2			  c3
+    2     1     3	5
+    2     1     4	5
+    2     1     5	5
+    3     1     4	5
+    3     1     5	5
+    4     1     5	5
+    1     2     6	5
+    1     2     7	5
+    1     2     8	5
+    6     2     7	5
+    6     2     8	5
+    7     2     8	5
+    2     7     9	5
+
+[ dihedrals ]
+;	ai	  aj	ak	  al funct			  c0			c1			  c2			c3			  c4			c5
+    3     1     2     6	 9
+    3     1     2     7	 9
+    3     1     2     8	 9
+    4     1     2     6	 9
+    4     1     2     7	 9
+    4     1     2     8	 9
+    5     1     2     6	 9
+    5     1     2     7	 9
+    5     1     2     8	 9
+    1     2     7     9	 9
+    6     2     7     9	 9
+    8     2     7     9	 9
+

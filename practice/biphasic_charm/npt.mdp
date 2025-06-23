@@ -1,0 +1,49 @@
+; RUN CONTROL PARAMETERS
+integrator              = md
+dt                      = 0.002        ; 2 fs time step
+nsteps                  = 250000        ; 100 ps simulation (adjust as needed)
+comm-mode               = Linear
+comm-grps               = System
+
+; OUTPUT CONTROL OPTIONS
+nstxout                 = 1000
+nstvout                 = 1000
+nstenergy               = 1000
+nstlog                  = 1000
+nstxout-compressed      = 1000
+
+; NEIGHBORSEARCHING
+cutoff-scheme           = Verlet
+nstlist                 = 10
+ns_type                 = grid
+rlist                   = 1.0
+
+; OPTIONS FOR ELECTROSTATICS AND VDW
+coulombtype             = PME
+rcoulomb                = 1.0
+rvdw                    = 1.0
+
+; TEMPERATURE COUPLING IS ON
+tcoupl                  = V-rescale
+tc-grps                 = System
+tau_t                   = 0.1
+ref_t                   = 300
+
+; PRESSURE COUPLING IS ON
+pcoupl                  = Berendsen
+pcoupltype              = isotropic
+tau_p                   = 5.0
+ref_p                   = 1.0
+compressibility         = 4.5e-5
+
+; GENERATE VELOCITIES FOR STARTUP
+gen_vel                 = no
+
+; CONSTRAINTS
+constraints             = all-bonds
+constraint_algorithm    = lincs
+lincs_iter              = 1
+lincs_order             = 4
+
+; PERIODIC BOUNDARY CONDITIONS
+pbc                     = xyz

@@ -41,7 +41,7 @@ gen_seed                = -1        ; generate a random seed
 ewald-geometry	= 3dc	    ; ewald
 
 nwall			= 2
-wall-atomtype		= OT OT
+wall-atomtype		= CG2O2 CG2O2
 wall-type		= 12-6
-wall-r-linpot		= 0.5
+wall-r-linpot		= -1
 wall-density		= 150 150

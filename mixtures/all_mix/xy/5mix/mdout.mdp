@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler07.engr.wisc.edu
-;	At date: Mon Jun 23 22:59:57 2025
+;	On host: euler05.engr.wisc.edu
+;	At date: Tue Jun 24 11:40:47 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -202,8 +202,8 @@ energygrp-excl           =
 nwall                    = 2
 wall-type                = 12-6
 wall-r-linpot            = 0.5
-wall-atomtype            = OT OT
-wall-density             = 150 150
+wall-atomtype            = CG2O2 CG2O2
+wall-density             = 500 500
 wall-ewald-zfac          = 3
 
 ; COM PULLING          

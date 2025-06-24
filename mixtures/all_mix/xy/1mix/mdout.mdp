@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
 ;	On host: euler06.engr.wisc.edu
-;	At date: Mon Jun 23 22:59:27 2025
+;	At date: Tue Jun 24 13:24:03 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -201,8 +201,8 @@ energygrp-excl           =
 ; Number of walls, type, atom types, densities and box-z scale factor for Ewald
 nwall                    = 2
 wall-type                = 12-6
-wall-r-linpot            = 0.5
-wall-atomtype            = OT OT
+wall-r-linpot            = -1
+wall-atomtype            = CG2O2 CG2O2
 wall-density             = 150 150
 wall-ewald-zfac          = 3
 

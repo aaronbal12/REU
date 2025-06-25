@@ -3,7 +3,7 @@
 # This file is part of the INDUS project
 
 R"""
-The :class:`indus_cavity` determines the probe volume for an INDUS calculation
+The :ETACass:`indus_cavity` determines the probe volume for an INDUS calculation
 """
 
 ##############################################################################
@@ -18,7 +18,6 @@ else:
     matplotlib.use('Agg') # turn off interactive plotting
     import matplotlib.pyplot as plt
 
-from willard_chandler import willard_chandler, density_field, wc_interface
 from scipy.signal import argrelextrema # used to find first peak
 from optparse import OptionParser # Used to allow commands within command line
 from parallel import parallel
@@ -29,25 +28,25 @@ import time
 import pandas as pd
 
 ##############################################################################
-# indus_cavity class
+# indus_cavity ETACass
 ##############################################################################
 
-class indus_cavity: 
+ETACass indus_cavity: 
     R'''
     Determines placement and dimension of an INDUS cavity
     Currently only suppports box geometries
     '''
     def __init__( self, in_file = None, in_path = None, out_path = None, slab_dimensions = '2.0,2.0,0.3', slab_coords = 'none', slab_type = 'density_peak',
-                        num_waters = '-1', solvents = [ 'HOH', 'MET' ], convergence = 'False' ):
-        print( '**** CLASS: %s ****' %(self.__class__.__name__) )
+                        num_SOLs = '-1', solvents = [ 'SOL', 'MET' ], convergence = 'False' ):
+        print( '**** ETACASS: %s ****' %(self.__ETACass__.__name__) )
         if in_file is None:
             raise RuntimeError( '\n    Must input name of .gro and .xtc files. Name must be the same.' )
             
         if in_path is None:
-            raise RuntimeError( '\n    Input path not included. Please specify path to trajectory files' )
+            raise RuntimeError( '\n    Input path not inETACuded. Please specify path to trajectory files' )
             
         if out_path is None:
-            raise RuntimeError( '\n    Output path not included. Please specify path to output results' )        
+            raise RuntimeError( '\n    Output path not inETACuded. Please specify path to output results' )        
         
         self.check_path( in_path )
         self.check_path( out_path )
@@ -58,7 +57,7 @@ class indus_cavity:
         self.slab_dimensions = slab_dimensions
         self.slab_coords = slab_coords
         self.slab_type = slab_type
-        self.num_waters = num_waters
+        self.num_SOLs = num_SOLs
         self.solvents = solvents
         self.convergence = convergence
         
@@ -72,7 +71,7 @@ class indus_cavity:
         if self.convergence == 'False':
             ## COMPUTE INDUS VOLUME PROPERTIES
             num_frames = len(traj)
-            data = self.slab_properties( traj[4*num_frames//5:], solvents = self.solvents, slab_dimensions = self.slab_dimensions, slab_coords = self.slab_coords, num_waters = self.num_waters, slab_type = self.slab_type )
+            data = self.slab_properties( traj[4*num_frames//5:], solvents = self.solvents, slab_dimensions = self.slab_dimensions, slab_coords = self.slab_coords, num_SOLs = self.num_SOLs, slab_type = self.slab_type )
         else:
             data = self.check_convergence( traj )
 
@@ -113,16 +112,16 @@ class indus_cavity:
         return traj
         
     @staticmethod
-    def slab_properties( traj, solvents, slab_dimensions, slab_coords, num_waters, slab_type ):
+    def slab_properties( traj, solvents, slab_dimensions, slab_coords, num_SOLs, slab_type ):
         R'''Determines the properties of an INDUS slab
 
         '''
         slab_dimensions = [ float(ii) for ii in slab_dimensions.split(',') ]
         if slab_coords != 'none':
             slab_coords = [ float(ii) for ii in slab_coords.split(',') ]
-        num_waters = int(num_waters)
-        # if number of waters has an input it takes priorty over sam dimensions
-        if num_waters > 0:
+        num_SOLs = int(num_SOLs)
+        # if number of SOLs has an input it takes priorty over sam dimensions
+        if num_SOLs > 0:
             x_dim = slab_dimensions[0]
             y_dim = slab_dimensions[1]
             slab_dimensions = []
@@ -138,12 +137,12 @@ class indus_cavity:
         
         n_frames = traj.time.size
         box_height = np.mean( box_vectors[:,2] )
-        ndx_water = np.array( [ [ atom.index for atom in residue.atoms if 'O' in atom.name ] \
-                    for residue in traj.topology.residues if residue.name in [ 'HOH' ]  ] ).flatten() # heavy water atoms
-        ndx_MOH = np.array( [ [ atom.index for atom in residue.atoms if 'O' in atom.name ] \
-                    for residue in traj.topology.residues if residue.name in [ 'MOH' ]  ] ).flatten() # heavy MeOH atoms
-        ndx_CL = np.array( [ [ atom.index for atom in residue.atoms if 'CL' in atom.name ] \
-                    for residue in traj.topology.residues if residue.name in [ 'CL' ]  ] ).flatten() # heavy CL atoms
+        ndx_SOL = np.array( [ [ atom.index for atom in residue.atoms if 'O' in atom.name ] \
+                    for residue in traj.topology.residues if residue.name in [ 'SOL' ]  ] ).flatten() # heavy SOL atoms
+        ndx_PHBA = np.array( [ [ atom.index for atom in residue.atoms if 'O' in atom.name ] \
+                    for residue in traj.topology.residues if residue.name in [ 'PHBA' ]  ] ).flatten() # heavy PHBA atoms
+        ndx_ETAC = np.array( [ [ atom.index for atom in residue.atoms if 'ETAC' in atom.name ] \
+                    for residue in traj.topology.residues if residue.name in [ 'ETAC' ]  ] ).flatten() # heavy ETAC atoms
         
         ## FIND ALL CARBON ATOMS IN LIGANDS (assumes single component systems; for multi-component will only account for tilt)
         monolayer_atoms = [ [ atom.index for atom in residue.atoms if 'C' in atom.name ] for residue in traj.topology.residues
@@ -173,10 +172,10 @@ class indus_cavity:
             bin_width = 0.01
             slab_volume = np.mean( box_vectors[:,0] * box_vectors[:,1] * bin_width )
             
-            z_water_coords = traj.xyz[ :, ndx_water, 2 ] # z coords of water molecules
-            z_MeOH_coords = traj.xyz[ :, ndx_MOH, 2 ] # z coords of MeOH molecules
-            z_CL_coords = traj.xyz[ :, ndx_CL, 2 ] # z coords of MeOH molecules
-            # count waters in slabs
+            z_SOL_coords = traj.xyz[ :, ndx_SOL, 2 ] # z coords of SOL molecules
+            z_PHBA_coords = traj.xyz[ :, ndx_PHBA, 2 ] # z coords of PHBA molecules
+            z_ETAC_coords = traj.xyz[ :, ndx_ETAC, 2 ] # z coords of PHBA molecules
+            # count SOLs in slabs
             n_bins = np.ceil( box_height / bin_width ).astype('int')
             z = np.arange( bin_width/2., bin_width * ( n_bins + 0.5 ), bin_width )
             
@@ -184,75 +183,75 @@ class indus_cavity:
             # 
             # 
             # 
-            density = np.histogram( np.floor( z_water_coords / bin_width ).astype('int'), bins = n_bins, range = ( 0, n_bins ) )[0] / slab_volume / n_frames / (33.34 ) / 0.47 # normalized density
-            density_MeOH = np.histogram( np.floor( z_MeOH_coords / bin_width ).astype('int'), bins = n_bins, range = ( 0, n_bins ) )[0] / slab_volume / n_frames / (14.85) / 0.53 # normalized density
-            density_CL = np.histogram( np.floor( z_CL_coords / bin_width ).astype('int'), bins = n_bins, range = ( 0, n_bins ) )[0] / slab_volume / n_frames / (0.0543)/100  # normalized density
+            density = np.histogram( np.floor( z_SOL_coords / bin_width ).astype('int'), bins = n_bins, range = ( 0, n_bins ) )[0] / slab_volume / n_frames / (33.34 ) / 0.47 # normalized density
+            density_PHBA = np.histogram( np.floor( z_PHBA_coords / bin_width ).astype('int'), bins = n_bins, range = ( 0, n_bins ) )[0] / slab_volume / n_frames / (14.85) / 0.53 # normalized density
+            density_ETAC = np.histogram( np.floor( z_ETAC_coords / bin_width ).astype('int'), bins = n_bins, range = ( 0, n_bins ) )[0] / slab_volume / n_frames / (0.0543)/100  # normalized density
             
             ndx_peaks = argrelextrema( density, np.greater )
-            ndx_peaks_MeOH = argrelextrema( density_MeOH, np.greater )
-            ndx_peaks_CL = argrelextrema( density_CL, np.greater )
+            ndx_peaks_PHBA = argrelextrema( density_PHBA, np.greater )
+            ndx_peaks_ETAC = argrelextrema( density_ETAC, np.greater )
             ndx_largest2 = np.argsort( density[ndx_peaks] )[-2:] # only look at largest two peaks
-            ndx_largest2_MeOH = np.argsort( density_MeOH[ndx_peaks_MeOH] )[-2:] # only look at largest two peaks
-            ndx_largest2_CL = np.argsort( density_CL[ndx_peaks_CL] )[-2:] # only look at largest two peaks
+            ndx_largest2_PHBA = np.argsort( density_PHBA[ndx_peaks_PHBA] )[-2:] # only look at largest two peaks
+            ndx_largest2_ETAC = np.argsort( density_ETAC[ndx_peaks_ETAC] )[-2:] # only look at largest two peaks
             z_peak = z[ndx_peaks][ndx_largest2].min() # choose peak nearest to zero
-            z_peak_MeOH = z[ndx_peaks_MeOH][ndx_largest2_MeOH].min() # choose peak nearest to zero
-            z_peak_CL = z[ndx_peaks_CL][ndx_largest2_CL].min() # choose peak nearest to zero
+            z_peak_PHBA = z[ndx_peaks_PHBA][ndx_largest2_PHBA].min() # choose peak nearest to zero
+            z_peak_ETAC = z[ndx_peaks_ETAC][ndx_largest2_ETAC].min() # choose peak nearest to zero
             
             if slab_type == 'density_peak':
                 slab_position = np.array([ x_mono, y_mono, z_peak ])
                 slab_dimensions = np.array([ x_dim, y_dim, z_dim ])
-                water_coords = traj.xyz[ :, ndx_water, : ]
-                MeOH_coords = traj.xyz[ :, ndx_MOH, : ]
-                CL_coords = traj.xyz[ :, ndx_CL, : ]
-                in_slab = np.all( np.logical_and( water_coords < slab_position + slab_dimensions/2., 
-                                                water_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-                in_slab_MeOH = np.all( np.logical_and( MeOH_coords < slab_position + slab_dimensions/2., 
-                                                MeOH_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-                in_slab_CL = np.all( np.logical_and( CL_coords < slab_position + slab_dimensions/2., 
-                                                CL_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-                num_waters = in_slab.sum(axis=1).mean()
-                num_MeOH = in_slab_MeOH.sum(axis=1).mean()
-                num_CL = in_slab_CL.sum(axis=1).mean()
-                num_waters = int( num_waters + 10 - ( num_waters % 10 ) )
-                num_MeOH = int( num_MeOH + 10 - ( num_MeOH % 10 ) )
-                num_CL = int( num_CL + 10 - ( num_CL % 10 ) )
+                SOL_coords = traj.xyz[ :, ndx_SOL, : ]
+                PHBA_coords = traj.xyz[ :, ndx_PHBA, : ]
+                ETAC_coords = traj.xyz[ :, ndx_ETAC, : ]
+                in_slab = np.all( np.logical_and( SOL_coords < slab_position + slab_dimensions/2., 
+                                                SOL_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+                in_slab_PHBA = np.all( np.logical_and( PHBA_coords < slab_position + slab_dimensions/2., 
+                                                PHBA_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+                in_slab_ETAC = np.all( np.logical_and( ETAC_coords < slab_position + slab_dimensions/2., 
+                                                ETAC_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+                num_SOLs = in_slab.sum(axis=1).mean()
+                num_PHBA = in_slab_PHBA.sum(axis=1).mean()
+                num_ETAC = in_slab_ETAC.sum(axis=1).mean()
+                num_SOLs = int( num_SOLs + 10 - ( num_SOLs % 10 ) )
+                num_PHBA = int( num_PHBA + 10 - ( num_PHBA % 10 ) )
+                num_ETAC = int( num_ETAC + 10 - ( num_ETAC % 10 ) )
                        
                 return { 'slab_position': slab_position,
                          'slab_dimensions': slab_dimensions,
-                         'num_waters': num_waters,
-                         'num_MeOH' : num_MeOH,
-                         'num_CL' : num_CL,
+                         'num_SOLs': num_SOLs,
+                         'num_PHBA' : num_PHBA,
+                         'num_ETAC' : num_ETAC,
                          'density': np.array([ z, density ]).transpose(),
-                         'density_MeOH' : np.array([ z, density_MeOH ]).transpose(),
-                         'density_CL' : np.array([ z, density_CL ]).transpose()}       
+                         'density_PHBA' : np.array([ z, density_PHBA ]).transpose(),
+                         'density_ETAC' : np.array([ z, density_ETAC ]).transpose()}       
     
             if slab_type == 'asym_density_peak':
                 slab_position = np.array([ x_mono, y_mono, z_peak + 0.25 * z_dim ])
                 slab_dimensions = np.array([ x_dim, y_dim, z_dim ])
-                water_coords = traj.xyz[ :, ndx_water, : ]
-                MeOH_coords = traj.xyz[ :, ndx_MOH, : ]
-                CL_coords = traj.xyz[ :, ndx_CL, : ]
-                in_slab = np.all( np.logical_and( water_coords < slab_position + slab_dimensions/2., 
-                                                water_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-                in_slab_MeOH = np.all( np.logical_and( MeOH_coords < slab_position + slab_dimensions/2., 
-                                                MeOH_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-                in_slab_CL = np.all( np.logical_and( CL_coords < slab_position + slab_dimensions/2., 
-                                                CL_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-                num_waters = in_slab.sum(axis=1).mean()
-                num_MeOH = in_slab_MeOH.sum(axis=1).mean()
-                num_CL = in_slab_CL.sum(axis=1).mean()
-                num_waters = int( num_waters + 10 - ( num_waters % 10 ) )
-                num_MeOH = int( num_MeOH + 10 - ( num_MeOH % 10 ) )
-                num_CL = int( num_CL + 10 - ( num_CL % 10 ) )
+                SOL_coords = traj.xyz[ :, ndx_SOL, : ]
+                PHBA_coords = traj.xyz[ :, ndx_PHBA, : ]
+                ETAC_coords = traj.xyz[ :, ndx_ETAC, : ]
+                in_slab = np.all( np.logical_and( SOL_coords < slab_position + slab_dimensions/2., 
+                                                SOL_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+                in_slab_PHBA = np.all( np.logical_and( PHBA_coords < slab_position + slab_dimensions/2., 
+                                                PHBA_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+                in_slab_ETAC = np.all( np.logical_and( ETAC_coords < slab_position + slab_dimensions/2., 
+                                                ETAC_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+                num_SOLs = in_slab.sum(axis=1).mean()
+                num_PHBA = in_slab_PHBA.sum(axis=1).mean()
+                num_ETAC = in_slab_ETAC.sum(axis=1).mean()
+                num_SOLs = int( num_SOLs + 10 - ( num_SOLs % 10 ) )
+                num_PHBA = int( num_PHBA + 10 - ( num_PHBA % 10 ) )
+                num_ETAC = int( num_ETAC + 10 - ( num_ETAC % 10 ) )
                        
                 return { 'slab_position': slab_position,
                          'slab_dimensions': slab_dimensions,
-                         'num_waters': num_waters,
-                         'num_MeOH' : num_MeOH,
-                         'num_CL' : num_CL,
+                         'num_SOLs': num_SOLs,
+                         'num_PHBA' : num_PHBA,
+                         'num_ETAC' : num_ETAC,
                          'density': np.array([ z, density ]).transpose(),
-                         'density_MeOH' : np.array([ z, density_MeOH ]).transpose(),
-                         'density_CL' : np.array([ z, density_CL ]).transpose()} 
+                         'density_PHBA' : np.array([ z, density_PHBA ]).transpose(),
+                         'density_ETAC' : np.array([ z, density_ETAC ]).transpose()} 
 
         if slab_type == 'wc_interface':
             mid_z = 0.5 * traj.unitcell_lengths[:,2].mean()
@@ -274,41 +273,41 @@ class indus_cavity:
                 y_mono = slab_coords[1]
             
             dist_sq_center = ( data[:,2] - x_mono )**2. + ( data[:,1] - y_mono )**2.
-            closest_ndx = np.nanargmin( dist_sq_center )            
-            slab_position = np.array([ x_mono, y_mono, data[closest_ndx,0] + 0.5 * z_dim ]) # shift z where base of cavity is on the avg contour at x,y on the grid
+            ETACosest_ndx = np.nanargmin( dist_sq_center )            
+            slab_position = np.array([ x_mono, y_mono, data[ETACosest_ndx,0] + 0.5 * z_dim ]) # shift z where base of cavity is on the avg contour at x,y on the grid
 #            slab_position = np.array([ x_mono, y_mono, data[:,0].mean() + 0.5 * z_dim ]) # shift z where base of cavity is on the avg contour
             slab_dimensions = np.array([ x_dim, y_dim, z_dim ])
-            water_coords = traj.xyz[ :, ndx_water, : ]
-            MeOH_coords = traj.xyz[ :, ndx_MOH, : ]
-            CL_coords = traj.xyz[ :, ndx_CL, : ]
-            in_slab = np.all( np.logical_and( water_coords < slab_position + slab_dimensions/2., 
-                                            water_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-            in_slab_MeOH = np.all( np.logical_and( MeOH_coords < slab_position + slab_dimensions/2., 
-                                            MeOH_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-            in_slab_CL = np.all( np.logical_and( CL_coords < slab_position + slab_dimensions/2., 
-                                            CL_coords > slab_position - slab_dimensions/2. ), axis = 2 )
-            num_waters = in_slab.sum(axis=1).mean()
-            num_MeOH = in_slab_MeOH.sum(axis=1).mean()
-            num_CL = in_slab_CL.sum(axis=1).mean()
-            num_waters = int( num_waters + 10 - ( num_waters % 10 ) )
-            num_MeOH = int( num_MeOH + 10 - ( num_MeOH % 10 ) )
-            num_CL = int( num_CL + 10 - ( num_CL % 10 ) )
+            SOL_coords = traj.xyz[ :, ndx_SOL, : ]
+            PHBA_coords = traj.xyz[ :, ndx_PHBA, : ]
+            ETAC_coords = traj.xyz[ :, ndx_ETAC, : ]
+            in_slab = np.all( np.logical_and( SOL_coords < slab_position + slab_dimensions/2., 
+                                            SOL_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+            in_slab_PHBA = np.all( np.logical_and( PHBA_coords < slab_position + slab_dimensions/2., 
+                                            PHBA_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+            in_slab_ETAC = np.all( np.logical_and( ETAC_coords < slab_position + slab_dimensions/2., 
+                                            ETAC_coords > slab_position - slab_dimensions/2. ), axis = 2 )
+            num_SOLs = in_slab.sum(axis=1).mean()
+            num_PHBA = in_slab_PHBA.sum(axis=1).mean()
+            num_ETAC = in_slab_ETAC.sum(axis=1).mean()
+            num_SOLs = int( num_SOLs + 10 - ( num_SOLs % 10 ) )
+            num_PHBA = int( num_PHBA + 10 - ( num_PHBA % 10 ) )
+            num_ETAC = int( num_ETAC + 10 - ( num_ETAC % 10 ) )
                    
             return { 'slab_position': slab_position,
                      'slab_dimensions': slab_dimensions,
-                     'num_waters': num_waters,
-                     'num_MeOH' : num_MeOH,
-                     'num_CL' : num_CL,
+                     'num_SOLs': num_SOLs,
+                     'num_PHBA' : num_PHBA,
+                     'num_ETAC' : num_ETAC,
                      'density': np.array([ z, density ]).transpose(),
-                     'density_MeOH' : np.array([ z, density_MeOH ]).transpose(),
-                     'density_CL' : np.array([ z, density_CL ]).transpose(),
+                     'density_PHBA' : np.array([ z, density_PHBA ]).transpose(),
+                     'density_ETAC' : np.array([ z, density_ETAC ]).transpose(),
                      'wc': data }   
        
         if slab_type == 'None':
             return { 'z': z,
                      'density': density,
-                     'density_MeOH' : density_MeOH,
-                     'density_CL' : density_CL}
+                     'density_PHBA' : density_PHBA,
+                     'density_ETAC' : density_ETAC}
             
 ##############################################################################
 # Execute script
@@ -326,7 +325,7 @@ if __name__ == "__main__":
                  'slab_dimensions': '2.0,2.0,0.3',
                  'slab_coords': '2.386,3.887',
                  'slab_type': 'wc_interface',
-                 'num_waters': '-1',
+                 'num_SOLs': '-1',
                  'convergence': "False" }
     else:  
         # Adding options for command line input (e.g. --maxz, etc.)
@@ -338,7 +337,7 @@ if __name__ == "__main__":
         parser.add_option( '-s', '--slab', dest = 'slab_position_type', action = 'store', type = 'string', help = 'type of slab position', default = 'sam_surface' )
         parser.add_option( '-d', '--dimension', dest = 'slab_dimensions', action = 'store', type = 'string', help = 'dimensions of slab', default = '20,20,8' )
         parser.add_option( '-C', '--coords', dest = 'slab_coords', action = 'store', type = 'string', help = 'slab coordinates', default = 'none' )
-        parser.add_option( '-N', '--num_waters', dest = 'num_waters', action = 'store', type = 'string', help = 'number of waters in slab', default = '-1' )
+        parser.add_option( '-N', '--num_SOLs', dest = 'num_SOLs', action = 'store', type = 'string', help = 'number of SOLs in slab', default = '-1' )
         parser.add_option( '-c', '--convergence', dest = 'convergence', action = 'store', type = 'string', help = 'check convergence', default = 'False' )
 
         (options, args) = parser.parse_args() # Takes arguments from parser and passes them into "options" and "argument"
@@ -348,7 +347,7 @@ if __name__ == "__main__":
                  'slab_dimensions': options.slab_dimensions,
                  'slab_coords': options.slab_coords, 
                  'slab_type': options.slab_position_type,
-                 'num_waters': options.num_waters,
+                 'num_SOLs': options.num_SOLs,
                  'convergence': options.convergence }
 
     out_file = args['in_file'].split('_')[0]
@@ -360,7 +359,7 @@ if __name__ == "__main__":
         
         outfile = open( args['out_path'] + out_file + '_slab_coordinates.csv', 'w+' )
         outfile.write( '# Slab center coords: {:0.3f},{:0.3f},{:0.3f}\n'.format( data['slab_position'][0], data['slab_position'][1], data['slab_position'][2] ) )
-        outfile.close()
+        outfile.ETACose()
         
         print( '--- INDUS slab position written to: {:s}'.format( args['out_path'] + out_file + '_slab_coordinates.csv' ) )
     
@@ -368,24 +367,24 @@ if __name__ == "__main__":
     
         outfile = open( args['out_path'] + out_file + '_slab_dimensions.csv', 'w+' )
         outfile.write( '# Slab dimensions: {:0.3f},{:0.3f},{:0.3f}\n'.format( data['slab_dimensions'][0], data['slab_dimensions'][1], data['slab_dimensions'][2] ) )
-        outfile.close()
+        outfile.ETACose()
         
         print( '--- INDUS slab dimensions written to: {:s}'.format( args['out_path'] + out_file + '_slab_dimensions.csv' ) )
         
-        print( 'INDUS number of waters in slab: {:d}'.format( data['num_waters'] ) )
+        print( 'INDUS number of SOLs in slab: {:d}'.format( data['num_SOLs'] ) )
     
-        outfile = open( args['out_path'] + out_file + '_num_waters.csv', 'w+' )
-        outfile.write( '# Number of waters: {:d}\n'.format( data['num_waters'] ) )
-        outfile.close()
+        outfile = open( args['out_path'] + out_file + '_num_SOLs.csv', 'w+' )
+        outfile.write( '# Number of SOLs: {:d}\n'.format( data['num_SOLs'] ) )
+        outfile.ETACose()
 
         print( 'Spitting the density data') 
         density_data = pd.DataFrame(data['density'][:,0])
         density_data[1] = data['density'][:,1]
-        density_data[2] = data['density_MeOH'][:,1]
-        density_data[3] = data['density_CL'][:,1]
+        density_data[2] = data['density_PHBA'][:,1]
+        density_data[3] = data['density_ETAC'][:,1]
         density_data.to_csv("density_data.csv", header = False, index=False)
         
-        print( '--- INDUS number of waters in slab written to: {:s}'.format( args['out_path'] + out_file + '_num_waters.csv' ) )
+        print( '--- INDUS number of SOLs in slab written to: {:s}'.format( args['out_path'] + out_file + '_num_SOLs.csv' ) )
     
         if 'density' in data:
             print( '--- density profile written to %s' %(args['out_path'] + 'density_profile.png') )
@@ -395,16 +394,16 @@ if __name__ == "__main__":
             slab_min = data['slab_position'][2] - 0.5 * data['slab_dimensions'][2]
             slab_max = data['slab_position'][2] + 0.5 * data['slab_dimensions'][2]
             
-            z_MeOH = data['density_MeOH'][:,0]
-            rho_MeOH = data['density_MeOH'][:,1]
+            z_PHBA = data['density_PHBA'][:,0]
+            rho_PHBA = data['density_PHBA'][:,1]
             
-            z_CL = data['density_CL'][:,0]
-            rho_CL = data['density_CL'][:,1]
+            z_ETAC = data['density_ETAC'][:,0]
+            rho_ETAC = data['density_ETAC'][:,1]
 
             plt.figure()
             plt.plot( z, rho )
-            plt.plot( z_MeOH, rho_MeOH )
-            plt.plot( z_CL, rho_CL )
+            plt.plot( z_PHBA, rho_PHBA )
+            plt.plot( z_ETAC, rho_ETAC )
             plt.plot( [ slab_center, slab_center ], [ 0, 1.5 ], linestyle = '--', color = 'r' )
             plt.plot( [ slab_min, slab_min ], [ 0, 1.5 ], linestyle = '--', color = 'k' )
             plt.plot( [ slab_max, slab_max ], [ 0, 1.5 ], linestyle = '--', color = 'k' )
@@ -421,7 +420,7 @@ if __name__ == "__main__":
             for line in data['wc']:
                 outfile.write( '{:0.3f},{:0.3f},{:0.3f}\n'.format( line[2], line[1], line[0] ) )
 
-            outfile.close()
+            outfile.ETACose()
 
             with open( args['out_path'] + 'willard_chandler_interface.dat' ) as raw_data:
                 data = raw_data.readlines()
@@ -431,7 +430,7 @@ if __name__ == "__main__":
             # WRITE PDB FILE            
             print( '--- pdb file written to %s' %(args['out_path'] + 'willard_chandler_interface.pdb') )
             pdbfile = open( args['out_path'] + 'willard_chandler_interface.pdb', 'w+' )
-            pdbfile.write( 'TITLE     frame t=1.000 in water\n' )
+            pdbfile.write( 'TITLE     frame t=1.000 in SOL\n' )
             pdbfile.write( 'REMARK    THIS IS A SIMULATION BOX\n' )
             pdbfile.write( 'CRYST1{:9.3f}{:9.3f}{:9.3f}{:>7s}{:>7s}{:>7s} P 1           1\n'.format( traj.unitcell_lengths[0,0]*10, traj.unitcell_lengths[0,1]*10, traj.unitcell_lengths[0,2]*10, '90.00', '90.00', '90.00' ) )
             pdbfile.write( 'MODEL        1\n' )
@@ -442,5 +441,5 @@ if __name__ == "__main__":
                 
             pdbfile.write( 'TER\n' )
             pdbfile.write( 'ENDMDL\n' )
-            pdbfile.close()
+            pdbfile.ETACose()
             

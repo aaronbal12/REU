@@ -16330,3 +16330,151 @@ Started mdrun on rank 0 Thu Jun 26 10:37:27 2025
     Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
     2.98808e+02   -2.48973e+00   -2.83344e+01    0.00000e+00
 
+step 11301800: timed with pme grid 80 80 768, coulomb cutoff 1.400: 466.7 M-cycles
+step 11302000: timed with pme grid 64 64 640, coulomb cutoff 1.633: 468.7 M-cycles
+step 11302200: timed with pme grid 56 56 560, coulomb cutoff 1.866: 478.2 M-cycles
+step 11302400: timed with pme grid 52 52 512, coulomb cutoff 2.041: 487.8 M-cycles
+step 11302600: timed with pme grid 48 48 480, coulomb cutoff 2.177: 488.9 M-cycles
+step 11302600: the maximum allowed grid scaling limits the PME load balancing to a coulomb cut-off of 2.177
+step 11302800: timed with pme grid 48 48 480, coulomb cutoff 2.177: 486.8 M-cycles
+step 11303000: timed with pme grid 52 52 512, coulomb cutoff 2.041: 484.0 M-cycles
+step 11303200: timed with pme grid 52 52 560, coulomb cutoff 2.010: 483.7 M-cycles
+step 11303400: timed with pme grid 56 56 560, coulomb cutoff 1.866: 476.7 M-cycles
+step 11303600: timed with pme grid 60 60 576, coulomb cutoff 1.814: 473.4 M-cycles
+step 11303800: timed with pme grid 60 60 600, coulomb cutoff 1.742: 468.2 M-cycles
+step 11304000: timed with pme grid 64 64 640, coulomb cutoff 1.633: 465.4 M-cycles
+step 11304200: timed with pme grid 72 72 648, coulomb cutoff 1.613: 468.0 M-cycles
+step 11304400: timed with pme grid 72 72 672, coulomb cutoff 1.555: 467.5 M-cycles
+step 11304600: timed with pme grid 72 72 768, coulomb cutoff 1.452: 468.7 M-cycles
+step 11304800: timed with pme grid 80 80 768, coulomb cutoff 1.400: 468.6 M-cycles
+              optimal pme grid 64 64 640, coulomb cutoff 1.633
+           Step           Time
+       11310000    22620.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.04856e+04    2.37827e+04    2.08911e+04    4.63464e+02    3.58831e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.48658e+02   -1.22942e+05   -7.48561e+04   -3.58273e+02   -1.18335e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.03486e+03   -2.50647e+05    1.19947e+05   -1.30700e+05   -2.12638e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.98211e+02   -2.48973e+00   -1.80094e+01    0.00000e+00
+
+           Step           Time
+       11320000    22640.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.00393e+04    2.34036e+04    2.05606e+04    4.69710e+02    2.51574e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.02782e+02   -1.23014e+05   -7.49315e+04   -3.58273e+02   -1.18469e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    9.84698e+02   -2.52093e+05    1.19768e+05   -1.32325e+05   -2.12707e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.97767e+02   -2.48973e+00    2.88143e+01    0.00000e+00
+
+           Step           Time
+       11330000    22660.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.01402e+04    2.39320e+04    2.07222e+04    4.64498e+02    1.73998e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.10573e+02   -1.22933e+05   -7.38764e+04   -3.58273e+02   -1.19304e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    9.71065e+02   -2.51035e+05    1.19779e+05   -1.31256e+05   -2.12616e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.97794e+02   -2.48973e+00   -6.32518e+01    0.00000e+00
+
+           Step           Time
+       11340000    22680.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.02667e+04    2.38280e+04    2.08588e+04    5.32349e+02    2.10286e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.00906e+02   -1.22969e+05   -7.43505e+04   -3.58273e+02   -1.19042e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    9.90780e+02   -2.51023e+05    1.19478e+05   -1.31545e+05   -2.12664e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.97045e+02   -2.48973e+00    5.34410e-01    0.00000e+00
+
+           Step           Time
+       11350000    22700.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.01671e+04    2.42890e+04    2.05500e+04    4.92166e+02    1.60755e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.53031e+02   -1.22981e+05   -7.40407e+04   -3.58273e+02   -1.19312e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    9.95948e+02   -2.51035e+05    1.19881e+05   -1.31154e+05   -2.12678e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.98048e+02   -2.48973e+00   -6.60791e+01    0.00000e+00
+
+           Step           Time
+       11360000    22720.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.06012e+04    2.37459e+04    2.08522e+04    4.28153e+02    1.18869e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -7.98021e+02   -1.22935e+05   -7.45744e+04   -3.58273e+02   -1.18810e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.04224e+03   -2.50794e+05    1.19867e+05   -1.30927e+05   -2.12704e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.98013e+02   -2.48973e+00    9.39186e+00    0.00000e+00
+
+           Step           Time
+       11370000    22740.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.03520e+04    2.40886e+04    2.09859e+04    4.69794e+02    1.20293e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.06722e+02   -1.23038e+05   -7.51244e+04   -3.58273e+02   -1.18378e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.04180e+03   -2.50756e+05    1.20629e+05   -1.30126e+05   -2.12709e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.99909e+02   -2.48973e+00   -4.54474e+01    0.00000e+00
+
+           Step           Time
+       11380000    22760.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.03123e+04    2.38249e+04    2.02871e+04    4.95926e+02    1.44919e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.01625e+02   -1.22970e+05   -7.43756e+04   -3.58273e+02   -1.18468e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    9.70259e+02   -2.51069e+05    1.19494e+05   -1.31575e+05   -2.12698e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.97085e+02   -2.48973e+00   -9.78596e+00    0.00000e+00
+
+           Step           Time
+       11390000    22780.00000
+
+   Energies (kJ/mol)
+           Bond          Angle            U-B    Proper Dih.  Improper Dih.
+    2.06397e+04    2.34989e+04    2.03403e+04    5.03304e+02    1.36115e+01
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+   -8.50639e+02   -1.23003e+05   -7.46070e+04   -3.58273e+02   -1.19089e+05
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    9.83657e+02   -2.51929e+05    1.19420e+05   -1.32509e+05   -2.12726e+05
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.96903e+02   -2.48973e+00   -9.17037e+00    0.00000e+00
+
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2021.5
+Source file: src/gromacs/mdlib/wall.cpp (line 112)
+
+Fatal error:
+An atom is beyond the wall: coordinates -15.002049 39.286777 -27.934603,
+distance -1.000000
+You might want to use the mdp option wall_r_linpot
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------

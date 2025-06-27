@@ -42,4 +42,4 @@ gen_vel                 = yes       ; assign velocities from Maxwell distributio
 gen_temp                = 300       ; temperature for Maxwell distribution
 gen_seed                = -1        ; generate a random seed
 
-ewald-geometry	= 3d	    ; ewald
+ewald-geometry	= 3dc	    ; ewald

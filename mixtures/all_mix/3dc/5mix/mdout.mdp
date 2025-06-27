@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
 ;	On host: euler06.engr.wisc.edu
-;	At date: Thu Jun 26 16:03:35 2025
+;	At date: Thu Jun 26 18:32:04 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs_2021.5/bin/gmx
 ;	Data prefix:  /usr/local/gromacs_2021.5
-;	Working dir:  /srv/home/apbal/work/REU/mixtures/all_mix/phases/1mix
+;	Working dir:  /srv/home/apbal/work/REU/mixtures/all_mix/3dc/5mix
 ;	Command line:
 ;	  gmx grompp -f nvt_prod.mdp -c npt.gro -p topol.top -r npt.gro -o nvt_prod.tpr -maxwarn 3
 
@@ -84,7 +84,7 @@ cutoff-scheme            = Verlet
 ; nblist update frequency
 nstlist                  = 10
 ; Periodic boundary conditions: xyz, no, xy
-pbc                      = xyz
+pbc                      = xy
 periodic-molecules       = no
 ; Allowed energy error due to the Verlet buffer in kJ/mol/ps per atom,
 ; a value of -1 means: use rlist
@@ -125,7 +125,7 @@ pme_order                = 4
 ewald-rtol               = 1e-05
 ewald-rtol-lj            = 0.001
 lj-pme-comb-rule         = Geometric
-ewald-geometry           = 3d
+ewald-geometry           = 3dc
 epsilon-surface          = 0
 implicit-solvent         = no
 
@@ -199,11 +199,11 @@ energygrp-excl           =
 
 ; WALLS                
 ; Number of walls, type, atom types, densities and box-z scale factor for Ewald
-nwall                    = 0
-wall-type                = 9-3
+nwall                    = 2
+wall-type                = 12-6
 wall-r-linpot            = -1
-wall-atomtype            = 
-wall-density             = 
+wall-atomtype            = CG2O2 CG2O2
+wall-density             = 150 150
 wall-ewald-zfac          = 3
 
 ; COM PULLING          

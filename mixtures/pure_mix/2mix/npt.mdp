@@ -33,7 +33,7 @@ ref_t                   = 298         ; reference temperature, one for each grou
 pcoupl                  = berendsen        ; no pressure coupling in NVT
 pcoupltype		= Semiisotropic
 tau_p			= 2.0
-ref_p			= 1.0 1.0 
+ref_p			= 1.0 1.0
 compressibility		= 4.5e-5 4.5e-5
 ; Periodic boundary conditions
 pbc                     = xyz       ; 3-D PBC

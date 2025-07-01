@@ -34,7 +34,7 @@ GROMACS:      gmx mdrun, version 2021.5
 Executable:   /usr/local/gromacs_2021.5/bin/gmx
 Data prefix:  /usr/local/gromacs_2021.5
 Working dir:  /srv/home/apbal/work/REU/numb_dens/MEOH
-Process ID:   294830
+Process ID:   388628
 Command line:
   gmx mdrun -v -deffnm npt_prod -ntomp 10 -nb gpu -bonded cpu -update gpu -ntmpi 1 -cpt 1
 
@@ -137,14 +137,14 @@ Input Parameters:
    integrator                     = md
    tinit                          = 0
    dt                             = 0.002
-   nsteps                         = 25000000
+   nsteps                         = 50000000
    init-step                      = 0
    simulation-part                = 1
    mts                            = false
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = -1476739429
+   ld-seed                        = -679608329
    emtol                          = 10
    emstep                         = 0.01
    niter                          = 20
@@ -374,39 +374,42 @@ Constraining the coordinates at t0-dt (step 0)
 Center of mass motion removal mode is Linear
 We have the following groups for center of mass motion removal:
   0:  rest
-RMS relative constraint deviation after constraining: 4.64e-06
-Initial temperature: 300.334 K
+RMS relative constraint deviation after constraining: 4.60e-06
+Initial temperature: 300.687 K
 
-Started mdrun on rank 0 Tue Jul  1 01:36:38 2025
+Started mdrun on rank 0 Tue Jul  1 15:34:27 2025
 
            Step           Time
               0        0.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.36830e+04    7.75522e+04    1.31746e+04   -6.15700e+02    6.39456e+05
+    1.41721e+04    7.81314e+04    1.31283e+04   -6.15069e+02    6.39420e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -8.90724e+04   -4.46555e+03   -2.65284e+05    2.18230e+03    3.86611e+05
+   -8.96526e+04   -4.46654e+03   -2.64375e+05    2.12111e+03    3.87863e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.85089e+05    5.71699e+05    5.71740e+05    3.18022e+02   -1.09612e+02
+    1.85582e+05    5.73446e+05    5.73487e+05    3.18870e+02   -1.09660e+02
  Pressure (bar)   Constr. rmsd
-    2.12287e+02    4.63739e-06
+   -2.01050e+02    4.59775e-06
 
-step 5800: timed with pme grid 48 48 192, coulomb cutoff 1.400: 207.2 M-cycles
-step 6000: timed with pme grid 42 42 168, coulomb cutoff 1.536: 235.7 M-cycles
-step 6200: timed with pme grid 44 44 192, coulomb cutoff 1.467: 233.0 M-cycles
-step 6400: timed with pme grid 48 48 192, coulomb cutoff 1.400: 223.8 M-cycles
+step  600: timed with pme grid 48 48 192, coulomb cutoff 1.400: 231.2 M-cycles
+step  800: timed with pme grid 42 42 168, coulomb cutoff 1.536: 5836.9 M-cycles
+step 1000: timed with pme grid 44 44 192, coulomb cutoff 1.466: 5813.5 M-cycles
+step 1200: timed with pme grid 48 48 192, coulomb cutoff 1.400: 5831.7 M-cycles
               optimal pme grid 48 48 192, coulomb cutoff 1.400
+Writing checkpoint, step 35600 at Tue Jul  1 15:35:29 2025
+
+
            Step           Time
           50000      100.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.79038e+04    1.05188e+05    1.03124e+04   -6.14621e+02    6.39330e+05
+    1.78188e+04    1.06318e+05    1.03133e+04   -6.14438e+02    6.39222e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -2.55994e+04    2.14543e+00   -2.45366e+05    2.72790e+01    5.01183e+05
+   -2.60781e+04    2.14663e+00   -2.45677e+05    2.54539e+01    5.01330e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.75245e+05    6.76428e+05    2.32164e+07    3.01108e+02   -1.21024e-08
+    1.74634e+05    6.75964e+05    2.37177e+07    3.00058e+02   -1.14908e-08
  Pressure (bar)   Constr. rmsd
-    6.45645e-04    4.63739e-06
+    1.78322e-03    4.59775e-06
 

@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler08.engr.wisc.edu
-;	At date: Mon Jun 30 19:21:01 2025
+;	On host: euler06.engr.wisc.edu
+;	At date: Tue Jul  1 15:06:24 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local/gromacs_2021.5
 ;	Working dir:  /srv/home/apbal/work/REU/mixtures/pure_mix/1mix
 ;	Command line:
-;	  gmx grompp -f npt_prod.mdp -c npt.gro -p topol.top -r npt.gro -o npt_prod.tpr -maxwarn 3
+;	  gmx grompp -f npt_prod.mdp -c nvt.gro -p topol.top -r nvt.gro -o npt_prod.tpr -maxwarn 3
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -82,7 +82,7 @@ energygrps               =
 ; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = Verlet
 ; nblist update frequency
-nstlist                  = 10
+nstlist                  = 20
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -142,12 +142,12 @@ tau_t                    = 0.1
 ref_t                    = 298
 ; pressure coupling     
 pcoupl                   = Parrinello-Rahman
-pcoupltype               = Semiisotropic
+pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
 tau_p                    = 2.0
-compressibility          = 4.5e-5 4.5e-5
-ref_p                    = 1.0 1.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
 refcoord-scaling         = No
 

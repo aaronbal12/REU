@@ -1,14 +1,14 @@
-title                   =  NPT equilibration 
+title                   =  NVT equilibration 
 ; Run parameters
 integrator              = md        ; leap-frog integrator
 nsteps                  = 2500000     ; 2 * 50000 = 100 ps
 dt                      = 0.002     ; 2 fs
 ; Output control
-nstxout                 = 5000       ; save coordinates every 1.0 ps
-nstvout                 = 5000       ; save velocities every 1.0 ps
-nstenergy               = 5000       ; save energies every 1.0 ps
-nstlog                  = 5000       ; update log file every 1.0 ps
-nstxout-compressed	= 5000       ; xtc file
+nstxout                 = 10000       ; save coordinates every 1.0 ps
+nstvout                 = 10000       ; save velocities every 1.0 ps
+nstenergy               = 10000       ; save energies every 1.0 ps
+nstlog                  = 10000       ; update log file every 1.0 ps
+nstxout-compressed	= 10000       ; xtc file
 ; Bond parameters
 continuation            = no        ; first dynamics run
 constraint_algorithm    = lincs     ; holonomic constraints 
@@ -30,11 +30,7 @@ tc-grps			= System
 tau_t                   = 0.1           ; time constant, in ps
 ref_t                   = 298         ; reference temperature, one for each group, in K
 ; Pressure coupling is off
-pcoupl                  = berendsen        ; no pressure coupling in NVT
-pcoupltype		= isotropic
-tau_p			= 2.0
-ref_p			= 1.0 
-compressibility		= 4.5e-5 
+pcoupl                  = no        ; no pressure coupling in NVT
 ; Periodic boundary conditions
 pbc                     = xyz       ; 3-D PBC
 ; Velocity generation

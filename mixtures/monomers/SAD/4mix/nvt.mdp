@@ -1,13 +1,14 @@
 title                   =  NVT equilibration 
 ; Run parameters
 integrator              = md        ; leap-frog integrator
-nsteps                  = 250000     ; 2 * 50000 = 100 ps
+nsteps                  = 2500000     ; 2 * 50000 = 100 ps
 dt                      = 0.002     ; 2 fs
 ; Output control
-nstxout                 = 1000       ; save coordinates every 1.0 ps
-nstvout                 = 1000       ; save velocities every 1.0 ps
-nstenergy               = 1000       ; save energies every 1.0 ps
-nstlog                  = 1000       ; update log file every 1.0 ps
+nstxout                 = 10000       ; save coordinates every 1.0 ps
+nstvout                 = 10000       ; save velocities every 1.0 ps
+nstenergy               = 10000       ; save energies every 1.0 ps
+nstlog                  = 10000       ; update log file every 1.0 ps
+nstxout-compressed	= 10000       ; xtc file
 ; Bond parameters
 continuation            = no        ; first dynamics run
 constraint_algorithm    = lincs     ; holonomic constraints 
@@ -24,7 +25,7 @@ DispCorr                = EnerPres  ; account for cut-off vdW scheme
 coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
 pme_order               = 4         ; cubic interpolation
 ; Temperature coupling is on
-tcoupl                  = V-rescale             ; modified Berendsen thermostat
+tcoupl                  = v-rescale             ; modified Berendsen thermostat
 tc-grps			= System
 tau_t                   = 0.1           ; time constant, in ps
 ref_t                   = 298         ; reference temperature, one for each group, in K

@@ -1,8 +1,8 @@
 #include "/srv/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
 
 ; additional params for the molecule
-#include "/srv/home/apbal/ff/dma.prm"
 #include "/srv/home/apbal/ff/sad.prm"
+#include "/srv/home/apbal/ff/dma.prm"
 #include "/srv/home/apbal/ff/etac.prm"
 #include "/srv/home/apbal/ff/etoh.prm"
 #include "/srv/home/apbal/ff/meoh.prm"
@@ -30,7 +30,7 @@ mol
 
 [ molecules ]
 ; Compound		  #mols
-SAD			20
+SAD			10
 DMA			174
 ETAC			205
 ETOH			147

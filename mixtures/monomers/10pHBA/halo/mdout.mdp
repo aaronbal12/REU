@@ -1,15 +1,15 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler08.engr.wisc.edu
-;	At date: Wed Jul  2 15:21:02 2025
+;	On host: euler07.engr.wisc.edu
+;	At date: Thu Jul  3 11:33:09 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs_2021.5/bin/gmx
 ;	Data prefix:  /usr/local/gromacs_2021.5
-;	Working dir:  /srv/home/apbal/work/REU/mixtures/monomers/pHBA/halo
+;	Working dir:  /srv/home/apbal/work/REU/mixtures/monomers/10pHBA/halo
 ;	Command line:
 ;	  gmx grompp -f npt_prod.mdp -c npt_pr.gro -p topol.top -r npt_pr.gro -o npt_prod.tpr -maxwarn 3
 

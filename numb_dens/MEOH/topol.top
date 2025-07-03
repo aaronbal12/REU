@@ -1,8 +1,20 @@
 #include "/srv/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
 
 ; additional params for the molecule
+#include "/srv/home/apbal/ff/phba.prm"
+#include "/srv/home/apbal/ff/sa.prm"
+#include "/srv/home/apbal/ff/sad.prm"
+#include "/srv/home/apbal/ff/dma.prm"
+#include "/srv/home/apbal/ff/etac.prm"
+#include "/srv/home/apbal/ff/etoh.prm"
 #include "/srv/home/apbal/ff/meoh.prm"
 
+#include "/srv/home/apbal/ff/phba.itp"
+#include "/srv/home/apbal/ff/sa.itp"
+#include "/srv/home/apbal/ff/sad.itp"
+#include "/srv/home/apbal/ff/dma.itp"
+#include "/srv/home/apbal/ff/etac.itp"
+#include "/srv/home/apbal/ff/etoh.itp"
 #include "/srv/home/apbal/ff/meoh.itp"
 
 #include "/srv/home/apbal/ff/charmm36-jul2022.ff//tip3p.itp"
@@ -22,4 +34,4 @@ mol
 
 [ molecules ]
 ; Compound		  #mols
-MEOH			10000
+SOL			9475

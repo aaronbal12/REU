@@ -34,7 +34,7 @@ GROMACS:      gmx mdrun, version 2021.5
 Executable:   /usr/local/gromacs_2021.5/bin/gmx
 Data prefix:  /usr/local/gromacs_2021.5
 Working dir:  /srv/home/apbal/work/REU/numb_dens/MEOH
-Process ID:   436006
+Process ID:   589097
 Command line:
   gmx mdrun -v -deffnm npt_pr -ntomp 10 -nb gpu -bonded cpu -update gpu -ntmpi 1 -cpt 1
 
@@ -144,7 +144,7 @@ Input Parameters:
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = -268831365
+   ld-seed                        = -270008324
    emtol                          = 10
    emstep                         = 0.01
    niter                          = 20
@@ -374,10 +374,10 @@ Constraining the coordinates at t0-dt (step 0)
 Center of mass motion removal mode is Linear
 We have the following groups for center of mass motion removal:
   0:  rest
-RMS relative constraint deviation after constraining: 4.66e-06
-Initial temperature: 300.12 K
+RMS relative constraint deviation after constraining: 4.67e-06
+Initial temperature: 299.558 K
 
-Started mdrun on rank 0 Thu Jul  3 16:26:34 2025
+Started mdrun on rank 0 Thu Jul 10 11:35:54 2025
 
            Step           Time
               0        0.00000
@@ -388,42 +388,153 @@ Started mdrun on rank 0 Thu Jul  3 16:26:34 2025
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
    -4.29437e+04   -1.40643e+03   -1.30487e+05    1.18726e+03    1.98406e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    9.23876e+04    2.90793e+05    2.90826e+05    3.17490e+02   -4.35162e+01
+    9.24646e+04    2.90870e+05    2.90903e+05    3.17755e+02   -4.35162e+01
  Pressure (bar)   Constr. rmsd
-    7.74361e+01    4.66137e-06
+    6.39214e+01    4.67448e-06
 
-step 11000: timed with pme grid 44 44 192, coulomb cutoff 1.400: 120.8 M-cycles
-step 11200: timed with pme grid 40 40 160, coulomb cutoff 1.494: 138.2 M-cycles
-step 11400: timed with pme grid 42 42 168, coulomb cutoff 1.422: 125.5 M-cycles
-step 11600: timed with pme grid 44 44 192, coulomb cutoff 1.400: 116.4 M-cycles
-step 11800: timed with pme grid 42 42 168, coulomb cutoff 1.422: 115.7 M-cycles
-step 12000: timed with pme grid 44 44 192, coulomb cutoff 1.400: 111.0 M-cycles
-step 12200: timed with pme grid 42 42 168, coulomb cutoff 1.422: 114.6 M-cycles
-step 12400: timed with pme grid 44 44 192, coulomb cutoff 1.400: 112.9 M-cycles
+step 11900: timed with pme grid 44 44 192, coulomb cutoff 1.400: 112.4 M-cycles
+step 12100: timed with pme grid 40 40 160, coulomb cutoff 1.494: 126.2 M-cycles
+step 12300: timed with pme grid 42 42 168, coulomb cutoff 1.422: 115.9 M-cycles
+step 12500: timed with pme grid 44 44 192, coulomb cutoff 1.400: 105.7 M-cycles
+step 12700: timed with pme grid 42 42 168, coulomb cutoff 1.422: 105.3 M-cycles
+step 12900: timed with pme grid 44 44 192, coulomb cutoff 1.400: 95.7 M-cycles
+step 13100: timed with pme grid 42 42 168, coulomb cutoff 1.422: 98.8 M-cycles
+step 13300: timed with pme grid 44 44 192, coulomb cutoff 1.400: 96.8 M-cycles
+step 13500: timed with pme grid 42 42 168, coulomb cutoff 1.422: 104.5 M-cycles
+step 13700: timed with pme grid 44 44 192, coulomb cutoff 1.400: 105.9 M-cycles
               optimal pme grid 44 44 192, coulomb cutoff 1.400
            Step           Time
           50000      100.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    7.08193e+03    4.25070e+04    6.13866e+03   -3.05611e+02    3.19450e+05
+    7.09471e+03    4.15959e+04    6.14675e+03   -3.06862e+02    3.19606e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -1.92734e+04    9.72464e-01   -1.18656e+05    2.44552e+02    2.37187e+05
+   -2.13067e+04    9.48077e-01   -1.19341e+05    3.01828e+02    2.33792e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    8.61482e+04    3.23336e+05    5.26120e+06    2.96048e+02   -3.36234e-07
+    8.77831e+04    3.21575e+05    3.73468e+06    3.01667e+02   -4.81845e-07
  Pressure (bar)   Constr. rmsd
-    2.06585e-02    4.66137e-06
+    1.84570e-02    4.67448e-06
 
            Step           Time
          100000      200.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    9.51825e+03    5.59991e+04    4.57237e+03   -3.06163e+02    3.19498e+05
+    9.67763e+03    5.43398e+04    4.76050e+03   -3.05823e+02    3.19482e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -1.92590e+04    1.07206e+00   -1.20603e+05    3.44941e+01    2.49455e+05
+   -2.14333e+04    1.06039e+00   -1.22083e+05    5.87036e+01    2.44498e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    8.65830e+04    3.36038e+05    2.69794e+06    2.97543e+02   -1.27845e-08
+    8.71581e+04    3.31656e+05    2.06254e+06    2.99519e+02   -2.81547e-08
  Pressure (bar)   Constr. rmsd
-    2.26569e-03    4.66137e-06
+    4.82136e-03    4.67448e-06
+
+           Step           Time
+         150000      300.00000
+
+   Energies (kJ/mol)
+           Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
+    9.74680e+03    5.67496e+04    4.78441e+03   -3.05359e+02    3.19422e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+   -1.90298e+04    6.83650e-01   -1.11345e+05    6.19445e+02    2.60642e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    8.68134e+04    3.47456e+05    3.95369e+06    2.98334e+02   -3.73823e-06
+ Pressure (bar)   Constr. rmsd
+   -4.20561e-02    4.67448e-06
+
+Writing checkpoint, step 158900 at Thu Jul 10 11:36:54 2025
+
+
+
+Step 170201  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170211  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170221  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170231  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170241  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170251  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170261  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170271  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170281  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170291  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170301  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170311  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170321  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170331  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170341  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170351  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170361  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170371  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170381  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 170391  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+           Step           Time
+         200000      400.00000
+
+   Energies (kJ/mol)
+           Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
+    1.10602e+04    6.09071e+04    5.50652e+03   -3.06258e+02    3.19232e+05
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+   -3.37137e+02    1.08127e+00   -6.06611e+04    1.57485e+01    3.35418e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    8.73253e+04    4.22743e+05    4.65447e+07    3.00093e+02   -4.88622e-09
+ Pressure (bar)   Constr. rmsd
+    1.63266e-03    4.67448e-06
 

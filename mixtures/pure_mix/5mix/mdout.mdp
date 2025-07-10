@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler06.engr.wisc.edu
-;	At date: Wed Jul  2 03:20:25 2025
+;	On host: euler05.engr.wisc.edu
+;	At date: Thu Jul 10 11:43:53 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local/gromacs_2021.5
 ;	Working dir:  /srv/home/apbal/work/REU/mixtures/pure_mix/5mix
 ;	Command line:
-;	  gmx grompp -f nvt_prod.mdp -c npt_pr.gro -p topol.top -r npt_pr.gro -o nvt_prod.tpr -maxwarn 3
+;	  gmx grompp -f npt_prod.mdp -c npt_pr.gro -p topol.top -r npt_pr.gro -o npt_prod.tpr -maxwarn 3
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -61,15 +61,15 @@ rtpi                     = 0.05
 
 ; OUTPUT CONTROL OPTIONS
 ; Output frequency for coords (x), velocities (v) and forces (f)
-nstxout                  = 10000
-nstvout                  = 10000
+nstxout                  = 50000
+nstvout                  = 50000
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 10000
+nstlog                   = 50000
 nstcalcenergy            = 100
-nstenergy                = 10000
+nstenergy                = 50000
 ; Output frequency and precision for .xtc file
-nstxout-compressed       = 10000
+nstxout-compressed       = 50000
 compressed-x-precision   = 1000
 ; This selects the subset of atoms for the compressed
 ; trajectory file. You can select multiple groups. By
@@ -141,13 +141,13 @@ tc-grps                  = System
 tau_t                    = 0.1
 ref_t                    = 298
 ; pressure coupling     
-pcoupl                   = no
-pcoupltype               = Isotropic
+pcoupl                   = Parrinello-Rahman
+pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau-p                    = 1
-compressibility          = 
-ref-p                    = 
+tau_p                    = 2.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
 refcoord-scaling         = No
 

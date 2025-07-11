@@ -1,15 +1,15 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler06.engr.wisc.edu
-;	At date: Thu Jul 10 16:30:14 2025
+;	On host: euler07.engr.wisc.edu
+;	At date: Thu Jul 10 23:55:46 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs_2021.5/bin/gmx
 ;	Data prefix:  /usr/local/gromacs_2021.5
-;	Working dir:  /srv/home/apbal/work/REU/mixtures/pure_mix/1mix_long
+;	Working dir:  /srv/home/apbal/work/REU/mixtures/pure_mix/SOL-DMA
 ;	Command line:
 ;	  gmx grompp -f npt_prod.mdp -c npt_pr.gro -p topol.top -r npt_pr.gro -o npt_prod.tpr -maxwarn 3
 
@@ -25,7 +25,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 250000000
+nsteps                   = 50000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -82,7 +82,7 @@ energygrps               =
 ; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = Verlet
 ; nblist update frequency
-nstlist                  = 20
+nstlist                  = 10
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no

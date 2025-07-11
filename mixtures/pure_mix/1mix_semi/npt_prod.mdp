@@ -6,18 +6,18 @@ dt                      = 0.002     ; 2 fs
 ; Output control
 nstxout                 = 50000       ; save coordinates every 1.0 ps
 nstvout                 = 50000       ; save velocities every 1.0 ps
-nstenergy               = 50000       ; save energies every 1.0 ps
-nstlog                  = 50000       ; update log file every 1.0 ps
+nstenergy               = 5000       ; save energies every 1.0 ps
+nstlog                  = 5000       ; update log file every 1.0 ps
 nstxout-compressed	= 50000       ; xtc file
 ; Bond parameters
-continuation            = no        ; first dynamics run
+continuation            = yes        ; first dynamics run
 constraint_algorithm    = lincs     ; holonomic constraints 
 constraints             = h-bonds   ; bonds involving H are constrained
 lincs_iter              = 1         ; accuracy of LINCS
 lincs_order             = 4         ; also related to accuracy
 ; Nonbonded settings 
 cutoff-scheme           = Verlet    ; Buffered neighbor searching
-nstlist                 = 20        ; 20 fs, largely irrelevant with Verlet
+nstlist                 = 10        ; 20 fs, largely irrelevant with Verlet
 rcoulomb                = 1.4       ; short-range electrostatic cutoff (in nm)
 rvdw                    = 1.4       ; short-range van der Waals cutoff (in nm)
 DispCorr                = EnerPres  ; account for cut-off vdW scheme
@@ -31,15 +31,13 @@ tau_t                   = 0.1           ; time constant, in ps
 ref_t                   = 298         ; reference temperature, one for each group, in K
 ; Pressure coupling is off
 pcoupl                  = Parrinello-Rahman        ; no pressure coupling in NVT
-pcoupltype		= semiisotropic
+pcoupltype		= isotropic
 tau_p			= 2.0
-ref_p			= 1.0 1.0 
-compressibility		= 4.5e-5 4.5e-5
+ref_p			= 1.0 
+compressibility		= 4.5e-5 
 ; Periodic boundary conditions
 pbc                     = xyz       ; 3-D PBC
 ; Velocity generation
-gen_vel                 = yes       ; assign velocities from Maxwell distribution
-gen_temp                = 300       ; temperature for Maxwell distribution
-gen_seed                = -1        ; generate a random seed
+gen_vel                 = no       ; assign velocities from Maxwell distribution
 
 ewald-geometry	= 3d	    ; ewald

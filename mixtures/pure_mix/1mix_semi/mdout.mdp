@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
 ;	On host: euler06.engr.wisc.edu
-;	At date: Fri Jul 11 00:37:54 2025
+;	At date: Fri Jul 11 14:42:47 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -65,9 +65,9 @@ nstxout                  = 50000
 nstvout                  = 50000
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 50000
+nstlog                   = 5000
 nstcalcenergy            = 100
-nstenergy                = 50000
+nstenergy                = 5000
 ; Output frequency and precision for .xtc file
 nstxout-compressed       = 50000
 compressed-x-precision   = 1000
@@ -82,7 +82,7 @@ energygrps               =
 ; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = Verlet
 ; nblist update frequency
-nstlist                  = 20
+nstlist                  = 10
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -142,12 +142,12 @@ tau_t                    = 0.1
 ref_t                    = 298
 ; pressure coupling     
 pcoupl                   = Parrinello-Rahman
-pcoupltype               = semiisotropic
+pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
 tau_p                    = 2.0
-compressibility          = 4.5e-5 4.5e-5
-ref_p                    = 1.0 1.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
 refcoord-scaling         = No
 
@@ -167,16 +167,16 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = yes
-gen_temp                 = 300
-gen_seed                 = -1
+gen_vel                  = no
+gen-temp                 = 300
+gen-seed                 = -1
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds
 ; Type of constraint algorithm
 constraint_algorithm     = lincs
 ; Do not constrain the start configuration
-continuation             = no
+continuation             = yes
 ; Use successive overrelaxation to reduce the number of shake iterations
 Shake-SOR                = no
 ; Relative tolerance of shake

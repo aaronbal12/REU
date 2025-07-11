@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
 ;	On host: euler05.engr.wisc.edu
-;	At date: Fri Jul 11 12:06:15 2025
+;	At date: Fri Jul 11 12:49:08 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
 ;	
 ;	Executable:   /usr/local/gromacs_2021.5/bin/gmx
 ;	Data prefix:  /usr/local/gromacs_2021.5
-;	Working dir:  /srv/home/apbal/work/REU/practice/biphasic_charm/solv/new_npt
+;	Working dir:  /srv/home/apbal/work/REU/mixtures/pure_mix/test
 ;	Command line:
 ;	  gmx grompp -f npt_prod.mdp -c npt_pr.gro -p topol.top -r npt_pr.gro -o npt_prod.tpr -maxwarn 3
 
@@ -25,7 +25,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 60000000
+nsteps                   = 50000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -65,9 +65,9 @@ nstxout                  = 50000
 nstvout                  = 50000
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 50000
+nstlog                   = 5000
 nstcalcenergy            = 100
-nstenergy                = 50000
+nstenergy                = 5000
 ; Output frequency and precision for .xtc file
 nstxout-compressed       = 50000
 compressed-x-precision   = 1000
@@ -167,16 +167,16 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = yes
-gen_temp                 = 300
-gen_seed                 = -1
+gen_vel                  = no
+gen-temp                 = 300
+gen-seed                 = -1
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds
 ; Type of constraint algorithm
 constraint_algorithm     = lincs
 ; Do not constrain the start configuration
-continuation             = no
+continuation             = yes
 ; Use successive overrelaxation to reduce the number of shake iterations
 Shake-SOR                = no
 ; Relative tolerance of shake

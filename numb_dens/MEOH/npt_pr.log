@@ -465,7 +465,7 @@ Restarting from checkpoint, appending to previous log file.
 Executable:   /usr/local/gromacs_2021.5/bin/gmx
 Data prefix:  /usr/local/gromacs_2021.5
 Working dir:  /srv/home/apbal/work/REU/numb_dens/MEOH
-Process ID:   689477
+Process ID:   657080
 Command line:
   gmx mdrun -v -deffnm npt_pr -cpi npt_pr.cpt -append -ntomp 10 -nb gpu -bonded cpu -update gpu -ntmpi 1
 
@@ -551,16 +551,8 @@ Center of mass motion removal mode is Linear
 We have the following groups for center of mass motion removal:
   0:  rest
 
-Started mdrun on rank 0 Fri Jul 11 13:59:25 2025
+Started mdrun on rank 0 Sat Jul 12 13:53:12 2025
 
-
-Step 170191  Warning: Pressure scaling more than 1%. This may mean your system
- is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
-equilibration can lead to simulation instability, and is discouraged.
-
-Step 170201  Warning: Pressure scaling more than 1%. This may mean your system
- is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
-equilibration can lead to simulation instability, and is discouraged.
 
 Step 170211  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
@@ -633,17 +625,27 @@ equilibration can lead to simulation instability, and is discouraged.
 Step 170381  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
-step 173400: timed with pme grid 44 44 192, coulomb cutoff 1.400: 82.0 M-cycles
-step 173400: the box size limits the PME load balancing to a coulomb cut-off of 1.400
+
+Step 170391  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+step 172100: timed with pme grid 44 44 192, coulomb cutoff 1.400: 89.2 M-cycles
+step 172100: the box size limits the PME load balancing to a coulomb cut-off of 1.400
               optimal pme grid 44 44 192, coulomb cutoff 1.400
            Step           Time
          200000      400.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.09302e+04    6.01766e+04    5.49577e+03   -3.05064e+02    3.19127e+05
+    1.08700e+04    5.96850e+04    5.46748e+03   -3.04996e+02    3.19183e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -4.92000e+01    1.08100e+00   -6.25323e+04    1.63178e+01    3.32860e+05
+   -5.17574e+02    1.08147e+00   -6.35418e+04    1.63308e+01    3.30859e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    8.78708e+04    4.18730e+05    4.71274e+07    3.01968e+02   -4.75797e-09
+ Pressure (bar)   Constr. rmsd
+    4.50183e-04    0.00000e+00
+
+.32860e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
     8.77055e+04    4.20566e+05    4.57219e+07    3.01400e+02   -5.06872e-09
  Pressure (bar)   Constr. rmsd

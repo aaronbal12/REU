@@ -1,0 +1,47 @@
+; Run parameters
+integrator      = md            ; leap-frog integrator
+cutoff-scheme   = Verlet
+nsteps          = 50000000       ; 5 ns
+dt              = 0.002             ; 2 fs
+; Output control
+nstxout         = 50000
+nstvout         = 50000
+nstxtcout       = 500       ; save every 1 ps (for initial equil)
+nstenergy       = 100           ; save energies every 0.2 ps
+nstlog          = 100           ; update log file every 0.2 ps
+; Extension
+table-extension = 3.5
+; Bond parameters
+continuation    = no
+constraint_algorithm = lincs    ; holonomic constraints
+constraints     = h-bonds               ; all bonds (even heavy atom-H bonds) constrained
+; Neighborsearching
+ns_type         = grid          ; include all atoms in neighbor list
+nstlist         = 10            ; recommended for verlet
+rlist           = 1.2           ; recommended for charmm
+rcoulomb        = 1.2           ; ibid
+rvdw            = 1.2           ; for switching function
+rvdw-switch     = 1.0           ; when to start switching off force
+; Electrostatics
+vdwtype         = Cutoff
+vdw-modifier    = Potential-switch      ; smoothing function based on Bockmann
+coulombtype     = PME
+; Temperature coupling is on
+tcoupl          = v-rescale             ; temp coupling
+ref_t           = 298
+tau_t           = 0.1
+tc-grps         = System
+; Pressure coupling is off
+pcoupl          = no    ; NVT
+; Periodic boundary conditions
+pbc             = xyz
+; Dispersion correction
+DispCorr        = EnerPres          ; Note that dispersion correction should be applied in the case of lipid monolayers, but not bilayers.
+; Velocity generation
+gen_vel             = yes               ; assign velocities from Maxwell distribution
+gen_temp        = 298
+comm-mode           = Linear    ; remove COM motion; possibly freeze Au atoms?
+nstcomm             = 10                ; remove every step
+nstcalcenergy   = 5                 ; calculate energy every step
+
+

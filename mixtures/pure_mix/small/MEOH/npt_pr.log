@@ -34,7 +34,7 @@ GROMACS:      gmx mdrun, version 2021.5
 Executable:   /usr/local/gromacs_2021.5/bin/gmx
 Data prefix:  /usr/local/gromacs_2021.5
 Working dir:  /srv/home/apbal/work/REU/mixtures/pure_mix/small/MEOH
-Process ID:   871285
+Process ID:   1024849
 Command line:
   gmx mdrun -v -deffnm npt_pr -ntomp 10 -nb gpu -bonded cpu -update gpu -ntmpi 1 -cpt 1
 
@@ -144,7 +144,7 @@ Input Parameters:
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = -1058817
+   ld-seed                        = -151784641
    emtol                          = 10
    emstep                         = 0.01
    niter                          = 20
@@ -302,7 +302,7 @@ annealing-npoints:           0
    nfreeze:           N           N           N
    energygrp-flags[  0]: 0
 
-Changing nstlist from 10 to 100, rlist from 1.4 to 1.408
+Changing nstlist from 10 to 100, rlist from 1.4 to 1.407
 
 1 GPU selected for this run.
 Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
@@ -329,11 +329,11 @@ Using a Gaussian width (1/beta) of 0.448228 nm for Ewald
 Potential shift: LJ r^-12: -1.764e-02 r^-6: -1.328e-01, Ewald -7.143e-06
 Initialized non-bonded Ewald tables, spacing: 1.10e-03 size: 1270
 
-Generated table with 1204 data points for 1-4 COUL.
+Generated table with 1203 data points for 1-4 COUL.
 Tabscale = 500 points/nm
-Generated table with 1204 data points for 1-4 LJ6.
+Generated table with 1203 data points for 1-4 LJ6.
 Tabscale = 500 points/nm
-Generated table with 1204 data points for 1-4 LJ12.
+Generated table with 1203 data points for 1-4 LJ12.
 Tabscale = 500 points/nm
 Long Range LJ corr.: <C6> 5.5025e-04
 
@@ -341,9 +341,9 @@ Long Range LJ corr.: <C6> 5.5025e-04
 Using GPU 8x8 nonbonded short-range kernels
 
 Using a 8x8 pair-list setup:
-  updated every 100 steps, buffer 0.008 nm, rlist 1.408 nm
+  updated every 100 steps, buffer 0.007 nm, rlist 1.407 nm
 At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
-  updated every 100 steps, buffer 0.201 nm, rlist 1.601 nm
+  updated every 100 steps, buffer 0.200 nm, rlist 1.600 nm
 
 Using Lorentz-Berthelot Lennard-Jones combination rule
 Removing pbc first time
@@ -374,664 +374,666 @@ Constraining the coordinates at t0-dt (step 0)
 Center of mass motion removal mode is Linear
 We have the following groups for center of mass motion removal:
   0:  rest
-RMS relative constraint deviation after constraining: 2.91e-06
-Initial temperature: 298.463 K
+RMS relative constraint deviation after constraining: 2.96e-06
+Initial temperature: 298.273 K
 
-Started mdrun on rank 0 Tue Jul 15 15:36:16 2025
+Started mdrun on rank 0 Tue Jul 15 15:57:23 2025
 
            Step           Time
               0        0.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.10240e+03    6.12392e+03    1.12565e+03   -4.94184e+01    5.11814e+04
+    1.08734e+03    6.06785e+03    1.06404e+03   -4.86713e+01    5.10821e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -7.09440e+03   -3.58371e+02   -2.15151e+04    1.78613e+02    3.06947e+04
+   -7.05908e+03   -3.53294e+02   -2.08688e+04    1.70812e+02    3.11423e+04
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.47182e+04    4.54129e+04    4.54161e+04    3.16190e+02   -1.10304e+02
+    1.47354e+04    4.58777e+04    4.58810e+04    3.16560e+02   -1.07202e+02
  Pressure (bar)   Constr. rmsd
-    4.39512e+02    2.91266e-06
+   -4.31258e+01    2.95920e-06
 
-step 36600: timed with pme grid 32 32 32, coulomb cutoff 1.400: 35.3 M-cycles
-step 36800: timed with pme grid 25 25 25, coulomb cutoff 1.764: 34.8 M-cycles
-step 37000: timed with pme grid 20 20 20, coulomb cutoff 2.205: 37.0 M-cycles
-step 37000: the maximum allowed grid scaling limits the PME load balancing to a coulomb cut-off of 2.205
-step 37200: timed with pme grid 20 20 20, coulomb cutoff 2.205: 34.9 M-cycles
-step 37400: timed with pme grid 24 24 24, coulomb cutoff 1.837: 36.4 M-cycles
-step 37600: timed with pme grid 25 25 25, coulomb cutoff 1.764: 34.7 M-cycles
-step 37800: timed with pme grid 28 28 28, coulomb cutoff 1.575: 34.7 M-cycles
-step 38000: timed with pme grid 32 32 32, coulomb cutoff 1.400: 35.1 M-cycles
-step 38200: timed with pme grid 20 20 20, coulomb cutoff 2.205: 34.8 M-cycles
-step 38400: timed with pme grid 24 24 24, coulomb cutoff 1.837: 34.7 M-cycles
-step 38600: timed with pme grid 25 25 25, coulomb cutoff 1.764: 35.0 M-cycles
-step 38800: timed with pme grid 28 28 28, coulomb cutoff 1.575: 34.9 M-cycles
-step 39000: timed with pme grid 32 32 32, coulomb cutoff 1.400: 34.7 M-cycles
-step 39200: timed with pme grid 20 20 20, coulomb cutoff 2.205: 34.9 M-cycles
-step 39400: timed with pme grid 24 24 24, coulomb cutoff 1.837: 34.6 M-cycles
-step 39600: timed with pme grid 25 25 25, coulomb cutoff 1.764: 34.7 M-cycles
-step 39800: timed with pme grid 28 28 28, coulomb cutoff 1.575: 35.1 M-cycles
-step 40000: timed with pme grid 32 32 32, coulomb cutoff 1.400: 34.8 M-cycles
-              optimal pme grid 24 24 24, coulomb cutoff 1.837
+step 38300: timed with pme grid 32 32 32, coulomb cutoff 1.400: 33.6 M-cycles
+step 38500: timed with pme grid 25 25 25, coulomb cutoff 1.772: 33.7 M-cycles
+step 38700: timed with pme grid 20 20 20, coulomb cutoff 2.215: 35.6 M-cycles
+step 38700: the maximum allowed grid scaling limits the PME load balancing to a coulomb cut-off of 2.215
+step 38900: timed with pme grid 20 20 20, coulomb cutoff 2.215: 34.3 M-cycles
+step 39100: timed with pme grid 24 24 24, coulomb cutoff 1.846: 37.7 M-cycles
+step 39300: timed with pme grid 25 25 25, coulomb cutoff 1.772: 33.4 M-cycles
+step 39500: timed with pme grid 28 28 28, coulomb cutoff 1.582: 34.2 M-cycles
+step 39700: timed with pme grid 32 32 32, coulomb cutoff 1.400: 32.6 M-cycles
+step 39900: timed with pme grid 20 20 20, coulomb cutoff 2.215: 33.8 M-cycles
+step 40100: timed with pme grid 25 25 25, coulomb cutoff 1.772: 33.3 M-cycles
+step 40300: timed with pme grid 28 28 28, coulomb cutoff 1.582: 33.8 M-cycles
+step 40500: timed with pme grid 32 32 32, coulomb cutoff 1.400: 32.7 M-cycles
+              optimal pme grid 32 32 32, coulomb cutoff 1.400
            Step           Time
           50000      100.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.30035e+03    7.51863e+03    9.86066e+02   -4.81150e+01    5.09936e+04
+    1.34564e+03    7.94586e+03    9.89909e+02   -4.84268e+01    5.10217e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -5.93733e+02    1.74607e-01   -1.31518e+04    1.67566e-01    4.70053e+04
+   -1.51032e+02    1.74691e-01   -1.30086e+04    4.04352e-01    4.80957e+04
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.39451e+04    6.09504e+04    2.00120e+06    2.99582e+02   -5.26282e-10
+    1.38161e+04    6.19117e+04    2.35873e+06    2.96810e+02   -4.18616e-10
  Pressure (bar)   Constr. rmsd
-   -7.62423e-04    2.91266e-06
+   -5.77485e-04    2.95920e-06
 
            Step           Time
          100000      200.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.75200e+03    8.92609e+03    9.76740e+02   -4.87346e+01    5.10667e+04
+    1.62177e+03    9.54185e+03    8.95185e+02   -4.83286e+01    5.10062e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -3.28611e+02    1.73651e-01   -1.20501e+04    3.39824e-01    5.02946e+04
+   -1.42734e+02    1.74097e-01   -1.19226e+04    6.75486e-01    5.09521e+04
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.36430e+04    6.39376e+04    1.81570e+06    2.93091e+02   -2.59377e-09
+    1.40166e+04    6.49687e+04    2.20193e+06    3.01118e+02   -1.43478e-09
  Pressure (bar)   Constr. rmsd
-   -3.28018e-03    2.91266e-06
+    2.36907e-03    2.95920e-06
 
 
-Step 130601  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132331  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130611  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132341  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130621  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132351  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130631  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132361  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130641  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132371  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130651  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132381  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130661  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132391  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130671  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132401  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130681  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132411  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130691  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132421  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130701  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132431  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130711  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132441  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130721  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132451  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130731  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132461  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130741  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132471  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130751  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132481  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130761  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132491  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130771  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132501  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130781  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132511  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130791  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132521  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130801  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132531  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130811  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132541  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130821  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132551  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130831  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132561  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130841  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132571  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130851  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132581  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130861  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132591  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130871  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132601  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130881  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132611  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130891  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132621  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130901  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132631  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130911  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132641  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130921  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132651  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130931  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132661  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130941  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132671  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130951  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132681  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130961  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132691  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130971  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132701  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130981  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132711  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 130991  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132721  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131001  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132731  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131011  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132741  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131021  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132751  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131031  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132761  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131041  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132771  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131051  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132781  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131061  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132791  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131071  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132801  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131081  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132811  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131091  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132821  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131101  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132831  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131111  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132841  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131121  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132851  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131131  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132861  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131141  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132871  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131161  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132881  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131171  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132891  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131181  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132921  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131191  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132931  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131201  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132941  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131211  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132951  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131221  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132961  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131231  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132971  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131241  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132981  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131251  Warning: Pressure scaling more than 1%. This may mean your system
+Step 132991  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131261  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133001  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131271  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133011  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131281  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133021  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131291  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133031  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131301  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133041  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131311  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133051  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131321  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133061  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131331  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133071  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131341  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133081  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131351  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133091  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131361  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133101  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131371  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133111  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131381  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133121  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131391  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133131  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131401  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133141  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131411  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133151  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131421  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133161  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131431  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133171  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131441  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133181  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131451  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133191  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131461  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133201  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131471  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133211  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131481  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133221  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131491  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133231  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131501  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133241  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131511  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133251  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131521  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133261  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131531  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133271  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131541  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133281  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131551  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133291  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131561  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133301  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131571  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133311  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131581  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133321  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131591  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133331  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131601  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133341  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131611  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133351  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131621  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133361  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131631  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133371  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131641  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133381  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131651  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133391  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131661  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133401  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131671  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133411  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131681  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133421  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131691  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133431  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131701  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133441  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131711  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133451  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131721  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133461  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131731  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133471  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131741  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133481  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131751  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133491  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131761  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133501  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131771  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133511  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131781  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133521  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131791  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133531  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131801  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133541  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131811  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133551  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131821  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133561  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131831  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133571  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131841  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133581  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131851  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133591  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131861  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133601  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131871  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133611  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131881  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133621  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131891  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133631  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131901  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133641  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131911  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133651  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131921  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133661  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131931  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133671  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131941  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133681  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131951  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133691  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131961  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133701  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131971  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133711  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131981  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133721  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 131991  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133731  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132001  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133741  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132011  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133751  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132021  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133761  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132031  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133771  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132041  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133781  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132051  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133791  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132061  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133801  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132071  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133811  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132081  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133821  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 132091  Warning: Pressure scaling more than 1%. This may mean your system
+Step 133831  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 133841  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 133851  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
            Step           Time
@@ -1039,328 +1041,328 @@ equilibration can lead to simulation instability, and is discouraged.
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.55097e+03    9.08822e+03    1.05603e+03   -4.74971e+01    5.08609e+04
+    1.44830e+03    8.77440e+03    1.04600e+03   -4.86073e+01    5.10336e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -5.70835e+00    1.74967e-01   -3.95457e+03    1.19349e-01    5.85486e+04
+   -3.93674e+01    1.74815e-01   -4.62824e+03    3.94381e-01    5.75866e+04
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.40243e+04    7.25729e+04    1.99821e+07    3.01282e+02   -1.53131e-10
+    1.39239e+04    7.15105e+04    1.78914e+07    2.99126e+02   -2.83350e-10
  Pressure (bar)   Constr. rmsd
-    5.52037e-05    2.91266e-06
+    1.10485e-03    2.95920e-06
 
            Step           Time
          200000      400.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    2.87146e+03    1.11053e+04    4.34013e+02   -4.90474e+01    5.11306e+04
+    2.57409e+03    1.13025e+04    3.91973e+02   -4.83673e+01    5.10158e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    2.48316e+02    1.75353e-01   -4.75767e+03    9.70302e-03    6.09832e+04
+    2.98701e+02    1.75352e-01   -5.72331e+03    2.52398e-02    5.98116e+04
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.41603e+04    7.51435e+04    3.21840e+07    3.04206e+02   -1.20052e-12
+    1.42411e+04    7.40527e+04    3.11567e+07    3.05942e+02   -1.25652e-12
  Pressure (bar)   Constr. rmsd
-    8.45960e-05    2.91266e-06
+    9.88512e-06    2.95920e-06
 
            Step           Time
          250000      500.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    2.60281e+03    1.11356e+04    5.50908e+02   -4.86222e+01    5.10488e+04
+    2.35958e+03    1.10060e+04    5.27531e+02   -4.79818e+01    5.09682e+04
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    1.81582e+02    1.72929e-01   -4.38259e+03    6.05111e-01    6.10893e+04
+    2.88188e+02    1.73789e-01   -5.31050e+03    1.00504e+00    5.97922e+04
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    1.38205e+04    7.49099e+04    1.21534e+07    2.96906e+02   -5.19777e-09
+    1.38900e+04    7.36822e+04    1.35780e+07    2.98398e+02   -2.19811e-09
  Pressure (bar)   Constr. rmsd
-   -3.88678e-03    2.91266e-06
+   -2.30905e-03    2.95920e-06
 
 
-Step 259211  Warning: Pressure scaling more than 1%. This may mean your system
+Step 260961  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259221  Warning: Pressure scaling more than 1%. This may mean your system
+Step 260971  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259231  Warning: Pressure scaling more than 1%. This may mean your system
+Step 260981  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259241  Warning: Pressure scaling more than 1%. This may mean your system
+Step 260991  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259251  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261001  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259261  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261011  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259271  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261021  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259281  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261031  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259291  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261041  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259301  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261051  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259311  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261061  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259321  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261071  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259331  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261081  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259341  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261091  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259351  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261101  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259361  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261111  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259371  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261121  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259381  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261131  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259391  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261141  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259401  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261151  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259411  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261161  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259421  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261171  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259431  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261181  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259441  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261191  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259451  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261201  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259461  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261211  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259471  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261221  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259481  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261231  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259491  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261241  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259501  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261251  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259511  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261261  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259521  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261271  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259531  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261281  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259541  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261291  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259551  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261301  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259561  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261311  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259571  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261321  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259581  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261331  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259591  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261341  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259601  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261351  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259611  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261361  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259621  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261371  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259631  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261381  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259641  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261391  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259651  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261401  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259661  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261411  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259671  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261421  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259681  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261431  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259691  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261441  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259701  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261451  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259711  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261461  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259721  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261471  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259731  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261481  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259741  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261491  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259751  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261501  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259761  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261511  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259771  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261521  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259781  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261531  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259791  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261541  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259801  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261551  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259811  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261561  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259821  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261571  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259831  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261581  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259841  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261591  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259851  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261601  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259861  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261611  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259871  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261621  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259881  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261631  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259891  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261641  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259901  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261651  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259911  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261661  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259921  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261671  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
-Step 259931  Warning: Pressure scaling more than 1%. This may mean your system
+Step 261681  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of

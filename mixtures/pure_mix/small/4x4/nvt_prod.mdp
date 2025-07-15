@@ -1,14 +1,14 @@
 ; Run parameters
 integrator      = md            ; leap-frog integrator
 cutoff-scheme   = Verlet
-nsteps          = 50000000       ; 5 ns
+nsteps          = 5000000       ; 5 ns
 dt              = 0.002             ; 2 fs
 ; Output control
 nstxout         = 50000
 nstvout         = 50000
-nstxtcout       = 500       ; save every 1 ps (for initial equil)
-nstenergy       = 100           ; save energies every 0.2 ps
-nstlog          = 100           ; update log file every 0.2 ps
+nstxtcout       = 5000       ; save every 1 ps (for initial equil)
+nstenergy       = 1000           ; save energies every 0.2 ps
+nstlog          = 1000           ; update log file every 0.2 ps
 ; Extension
 table-extension = 3.5
 ; Bond parameters

@@ -498,3 +498,140 @@ step 36200: timed with pme grid 36 36 36, coulomb cutoff 1.400: 35.3 M-cycles
  Pressure (bar)   Constr. rmsd
     2.71637e+02    2.40655e-06
 
+           Step           Time
+         400000      800.00000
+
+   Energies (kJ/mol)
+           Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
+    1.19947e+02    7.97247e+02    1.52975e+02   -6.21638e+00    6.40196e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    7.72117e+03   -3.23419e+02   -9.42535e+04    1.77634e+02   -7.92122e+04
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.66441e+04   -6.25681e+04   -6.15334e+04    2.98848e+02   -8.27098e+01
+ Pressure (bar)   Constr. rmsd
+   -1.24548e+02    2.40655e-06
+
+Writing checkpoint, step 427500 at Tue Jul 15 15:05:42 2025
+
+
+           Step           Time
+         450000      900.00000
+
+   Energies (kJ/mol)
+           Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
+    1.32508e+02    7.25990e+02    1.48030e+02   -6.19199e+00    6.39832e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    7.65919e+03   -3.21864e+02   -9.35380e+04    1.93413e+02   -7.86087e+04
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.67522e+04   -6.18564e+04   -6.14784e+04    3.00788e+02   -8.19168e+01
+ Pressure (bar)   Constr. rmsd
+   -4.56032e+01    2.40655e-06
+
+           Step           Time
+         500000     1000.00000
+
+Writing checkpoint, step 500000 at Tue Jul 15 15:05:52 2025
+
+
+   Energies (kJ/mol)
+           Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
+    1.38883e+02    7.75605e+02    1.36177e+02   -6.14610e+00    6.39318e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    7.88337e+03   -3.20010e+02   -9.42042e+04    1.69111e+02   -7.90340e+04
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.63815e+04   -6.26526e+04   -6.13897e+04    2.94131e+02   -8.09759e+01
+ Pressure (bar)   Constr. rmsd
+   -2.19013e+02    2.40655e-06
+
+
+Energy conservation over simulation part #1 of length 1000 ns, time 0 to 1000 ns
+  Conserved energy drift: 9.34e-05 kJ/mol/ps per atom
+
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 500001 steps using 5001 frames
+
+   Energies (kJ/mol)
+           Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
+    1.37079e+02    7.81507e+02    1.28719e+02   -6.18062e+00    6.39878e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    8.03559e+03   -3.20298e+02   -9.43124e+04    1.75842e+02   -7.89814e+04
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.65989e+04   -6.23825e+04   -6.17389e+04    2.98035e+02   -8.11253e+01
+ Pressure (bar)   Constr. rmsd
+   -1.84333e+00    0.00000e+00
+
+          Box-X          Box-Y          Box-Z
+    4.03294e+00    4.03294e+00    4.03294e+00
+
+   Total Virial (kJ/mol)
+    5.52936e+03    7.91320e+00   -9.25423e+00
+    7.91282e+00    5.53695e+03   -6.79206e+00
+   -9.25435e+00   -6.79188e+00    5.54836e+03
+
+   Pressure (bar)
+    2.18249e+00   -3.72902e+00    5.57433e+00
+   -3.72883e+00   -5.77860e-01    3.47633e+00
+    5.57440e+00    3.47623e+00   -7.13462e+00
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ Pair Search distance check            5192.470016       46732.230     0.0
+ NxN Ewald Elec. + LJ [F]           5737225.969728   378656914.002    98.3
+ NxN Ewald Elec. + LJ [V&F]           57963.324288     6202075.699     1.6
+ 1,4 nonbonded interactions             150.000300       13500.027     0.0
+ Shift-X                                 33.006600         198.040     0.0
+ Bonds                                   50.000100        2950.006     0.0
+ Propers                                150.000300       34350.069     0.0
+ Virial                                 332.256645        5980.620     0.0
+ Stop-CM                                 33.013200         330.132     0.0
+ Calc-Ekin                              660.013200       17820.356     0.0
+ Lincs                                    0.000800           0.048     0.0
+ Lincs-Mat                                0.007200           0.029     0.0
+ Constraint-V                             0.006800           0.061     0.0
+ Settle                                   0.004000           1.480     0.0
+ Urey-Bradley                           350.000700       64050.128     0.0
+-----------------------------------------------------------------------------
+ Total                                               385044902.926   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank, each using 10 OpenMP threads
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1   10       5001       5.162        134.216   7.3
+ Launch GPU ops.        1   10     995001      49.179       1278.656  69.7
+ Force                  1   10     500001       6.207        161.372   8.8
+ Wait PME GPU gather    1   10     500001       0.236          6.124   0.3
+ Reduce GPU PME F       1   10     500001       0.207          5.377   0.3
+ Wait GPU NB local      1   10     450000       0.300          7.797   0.4
+ Wait GPU state copy    1   10     625004       3.209         83.428   4.5
+ NB X/F buffer ops.     1   10      50001       0.445         11.577   0.6
+ Write traj.            1   10         12       0.592         15.396   0.8
+ Constraints            1   10          2       0.002          0.048   0.0
+ Rest                                           5.020        130.511   7.1
+-----------------------------------------------------------------------------
+ Total                                         70.558       1834.504 100.0
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      705.570       70.558     1000.0
+                 (ns/day)    (hour/ns)
+Performance:     1224.531        0.020
+Finished mdrun on rank 0 Tue Jul 15 15:05:52 2025
+

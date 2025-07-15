@@ -1,9 +1,9 @@
 #include "/srv/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
 
 ; additional params for the molecule
-#include "/srv/home/apbal/ff/meoh.prm"
+#include "/srv/home/apbal/ff/charmm36-jul2022.ff/meoh.prm"
 
-#include "/srv/home/apbal/ff/meoh.itp"
+#include "/srv/home/apbal/ff/charmm36-jul2022.ff/meoh.itp"
 
 #include "/srv/home/apbal/ff/charmm36-jul2022.ff//tip3p.itp"
 #ifdef POSRES_WATER

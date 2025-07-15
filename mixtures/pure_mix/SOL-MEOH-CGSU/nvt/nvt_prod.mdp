@@ -9,7 +9,6 @@ nstvout         = 50000
 nstxtcout       = 500       ; save every 1 ps (for initial equil)
 nstenergy       = 100           ; save energies every 0.2 ps
 nstlog          = 100           ; update log file every 0.2 ps
-nstxout-compressed = 50000	; xtc
 ; Extension
 table-extension = 3.5
 ; Bond parameters

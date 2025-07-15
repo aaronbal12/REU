@@ -465,7 +465,7 @@ Restarting from checkpoint, appending to previous log file.
 Executable:   /usr/local/gromacs_2021.5/bin/gmx
 Data prefix:  /usr/local/gromacs_2021.5
 Working dir:  /srv/home/apbal/work/REU/numb_dens/MEOH
-Process ID:   657080
+Process ID:   1023188
 Command line:
   gmx mdrun -v -deffnm npt_pr -cpi npt_pr.cpt -append -ntomp 10 -nb gpu -bonded cpu -update gpu -ntmpi 1
 
@@ -551,8 +551,12 @@ Center of mass motion removal mode is Linear
 We have the following groups for center of mass motion removal:
   0:  rest
 
-Started mdrun on rank 0 Sat Jul 12 13:53:12 2025
+Started mdrun on rank 0 Tue Jul 15 15:32:45 2025
 
+
+Step 170201  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
 
 Step 170211  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
@@ -625,58 +629,52 @@ equilibration can lead to simulation instability, and is discouraged.
 Step 170381  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
-
-Step 170391  Warning: Pressure scaling more than 1%. This may mean your system
- is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
-equilibration can lead to simulation instability, and is discouraged.
-step 172100: timed with pme grid 44 44 192, coulomb cutoff 1.400: 89.2 M-cycles
-step 172100: the box size limits the PME load balancing to a coulomb cut-off of 1.400
+step 171100: timed with pme grid 44 44 192, coulomb cutoff 1.400: 96.2 M-cycles
+step 171100: the box size limits the PME load balancing to a coulomb cut-off of 1.400
               optimal pme grid 44 44 192, coulomb cutoff 1.400
            Step           Time
          200000      400.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.08700e+04    5.96850e+04    5.46748e+03   -3.04996e+02    3.19183e+05
+    1.10589e+04    6.00593e+04    5.64761e+03   -3.05242e+02    3.19142e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-   -5.17574e+02    1.08147e+00   -6.35418e+04    1.63308e+01    3.30859e+05
+   -3.14841e+02    1.08097e+00   -6.31491e+04    1.65199e+01    3.32157e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    8.78708e+04    4.18730e+05    4.71274e+07    3.01968e+02   -4.75797e-09
+    8.74200e+04    4.19577e+05    4.56665e+07    3.00419e+02   -5.08307e-09
  Pressure (bar)   Constr. rmsd
-    4.50183e-04    0.00000e+00
-
-.32860e+05
-    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    8.77055e+04    4.20566e+05    4.57219e+07    3.01400e+02   -5.06872e-09
- Pressure (bar)   Constr. rmsd
-   -1.46005e-03    0.00000e+00
+    2.60027e-03    0.00000e+00
 
            Step           Time
          250000      500.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    9.73480e+03    5.85170e+04    4.27542e+03   -3.05659e+02    3.19549e+05
+    1.07136e+04    5.84921e+04    4.18346e+03   -3.05262e+02    3.19460e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    9.43168e+02    1.09355e+00   -7.09556e+04    2.49692e+00    3.21762e+05
+    5.08146e+02    1.09355e+00   -7.22220e+04    2.41811e+00    3.20834e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    8.90564e+04    4.10818e+05    2.02032e+07    3.06042e+02   -1.52410e-10
+    9.02091e+04    4.11043e+05    2.01979e+07    3.10004e+02   -1.52774e-10
  Pressure (bar)   Constr. rmsd
-    2.90291e-04    0.00000e+00
+   -3.21506e-05    0.00000e+00
 
            Step           Time
          300000      600.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.10646e+04    6.24633e+04    4.56106e+03   -3.07018e+02    3.19493e+05
+    1.11394e+04    6.35982e+04    4.37114e+03   -3.04097e+02    3.19055e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    5.60471e+02    1.07609e+00   -6.68757e+04    1.78696e+01    3.30979e+05
+    1.00078e+02    1.07607e+00   -6.78289e+04    1.79002e+01    3.30149e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
-    8.71972e+04    4.18176e+05    4.67112e+07    2.99653e+02   -8.86872e-09
+    8.74569e+04    4.17606e+05    4.66883e+07    3.00546e+02   -8.88565e-09
  Pressure (bar)   Constr. rmsd
-   -3.59129e-04    0.00000e+00
+   -6.66443e-03    0.00000e+00
 
+
+Step 325081  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
 
 Step 325091  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
@@ -887,10 +885,6 @@ Step 325601  Warning: Pressure scaling more than 1%. This may mean your system
 equilibration can lead to simulation instability, and is discouraged.
 
 Step 325611  Warning: Pressure scaling more than 1%. This may mean your system
- is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
-equilibration can lead to simulation instability, and is discouraged.
-
-Step 325621  Warning: Pressure scaling more than 1%. This may mean your system
  is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
 equilibration can lead to simulation instability, and is discouraged.
 
@@ -1218,9 +1212,15 @@ equilibration can lead to simulation instability, and is discouraged.
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.          LJ-14     Coulomb-14
-    1.11116e+04    6.10669e+04    5.65638e+03   -3.05679e+02    3.19148e+05
+    1.13977e+04    6.13595e+04    5.37155e+03   -3.05393e+02    3.19206e+05
         LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
-    1.19671e+03    1.08907e+00   -5.80306e+04    8.04127e+00    3.39852e+05
+    1.10478e+03    1.08926e+00   -5.94823e+04    8.11597e+00    3.38661e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    8.76824e+04    4.26344e+05    1.53427e+08    3.01320e+02   -1.05471e-09
+ Pressure (bar)   Constr. rmsd
+    8.24613e-04    0.00000e+00
+
+39852e+05
     Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
     8.82407e+04    4.28093e+05    1.49557e+08    3.03239e+02   -1.11304e-09
  Pressure (bar)   Constr. rmsd

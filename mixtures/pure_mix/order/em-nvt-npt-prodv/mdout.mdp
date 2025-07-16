@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (6041)
-;	On host: euler08.engr.wisc.edu
-;	At date: Tue Jul 15 15:53:46 2025
+;	On host: euler05.engr.wisc.edu
+;	At date: Wed Jul 16 11:04:38 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2021.5 (-:
@@ -65,11 +65,11 @@ nstxout                  = 50000
 nstvout                  = 50000
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 100
+nstlog                   = 5000
 nstcalcenergy            = 5
-nstenergy                = 100
+nstenergy                = 5000
 ; Output frequency and precision for .xtc file
-nstxout-compressed       = 500
+nstxout-compressed       = 5000
 compressed-x-precision   = 1000
 ; This selects the subset of atoms for the compressed
 ; trajectory file. You can select multiple groups. By

@@ -1,7 +1,7 @@
 ; Run parameters
 integrator      = md            ; leap-frog integrator
 cutoff-scheme   = Verlet
-nsteps          = 5000000       ; 5 ns
+nsteps          = 50000000       ; 5 ns
 dt              = 0.002             ; 2 fs
 ; Output control
 nstxout         = 50000

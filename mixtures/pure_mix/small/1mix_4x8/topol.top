@@ -1,13 +1,11 @@
 #include "/srv/home/apbal/ff/charmm36-jul2022.ff//forcefield.itp"
 
 ; additional params for the molecule
-#include "/srv/home/apbal/ff/phba.prm"
 #include "/srv/home/apbal/ff/dma.prm"
 #include "/srv/home/apbal/ff/etac.prm"
 #include "/srv/home/apbal/ff/etoh.prm"
 #include "/srv/home/apbal/ff/meoh.prm"
 
-#include "/srv/home/apbal/ff/phba.itp"
 #include "/srv/home/apbal/ff/dma.itp"
 #include "/srv/home/apbal/ff/etac.itp"
 #include "/srv/home/apbal/ff/etoh.itp"
@@ -30,7 +28,6 @@ mol
 
 [ molecules ]
 ; Compound		  #mols
-PHBA			4
 DMA			35
 ETAC			41
 ETOH			29
